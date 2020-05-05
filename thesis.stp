@@ -1,0 +1,14 @@
+
+% Preamble from file 'Chapter4/Figs/contact_diagram.tex'
+\usepackage {tikz}
+\usepackage {pgfplots}
+\usetikzlibrary {calc,patterns,decorations.pathmorphing,decorations.markings}
+\usetikzlibrary {decorations.markings}
+\usetikzlibrary {quotes,angles,positioning}
+\usetikzlibrary {arrows}
+\usetikzlibrary {patterns,matrix,shapes,arrows,fit,positioning,shadows,trees}
+\tikzset {-dot-/.style={decoration={
+markings,
+mark=at position #1 with {\fill circle (2pt);}},postaction={decorate}}} %%% in this line added a ;
+\def \checkmark {\tikz \fill [scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
+
