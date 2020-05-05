@@ -184,16 +184,60 @@ In this chapter a brief but complete overview of the mathematical framework of t
 \section{Beyond the Standard Model}
 
 \section{Monte Carlo Simulation}
+In order to interpret and understand experimental results from the ATLAS detector, comparisons to theoretical predictions must be made.
+These predictions are often (but not always) necessary for predicting background rates, optimizing analysis selection, determining detector measurement resolution for various physical quantities, and more.
+For collider physics, simulation involves not only the prediction of the underlying collision physics, but the interaction of the collision products with the detector itself.
+In order to achieve this, the ATLAS experiment utilizes simulation based on Monte Carlo (MC) methods which rely on random sampling.
 
-\subsection{Event Generation}
+The ATLAS MC simulation proceeds in a serial manner where each step relies only on the output of the prior step.
+An example illustration of a common $pp$ collision event outlining these steps is shown in Fig.~\ref{fig:pp_interaction}.
+These steps are (in order): %TODO: add basic one-sentence description of each of these
+\begin{enumerate}
+    \itemsep0em 
+    \item Hard Scatter Event Generation
+    \item Underlying Event Generation
+    \item Parton Showering
+    \item Hadronization
+    \item Detector Simulation
+\end{enumerate}
 
-\subsection{Parton Showering}
+\paragraph{\textbf{Hard Scatter Event Generation}}
+Simulation begins with the hard-scatter process, or in other words, evaluation of a set of Feynman diagrams for some particular $2 \rightarrow n$ process.
+In order to simulation collisions, parton distribution functions (PDF) must be used.
+A parton refers to the strongly interacting particles (quarks and gluons) which protons are composed of.
+These distribution functions describe the probability of finding a parton carrying a given fraction of the proton momentum.
+These Feynman diagrams are used to compute the so-called \textit{Matrix Element} (ME) for the process via a perturbative expansion of in powers of the strong coupling constant $(\alpha_s)$.
+An intrinsic and unavoidable property of QCD known as ``asymptotic freedom'' asserts that this type of perturbative expansion is only valid at very high energies, or in other words, only for the immediate hard scatter event.
+This breakdown occurs when the momentum scale of the collision products becomes $\approx 1$ GeV or less.
+In this ``soft regime'' another simulation must pick up where the perturbative ME expansion left off.
 
-\subsection{Hadronization}
+\paragraph{\textbf{Underlying Event (UE)}}
+In addition to the hard interaction generated, the interaction between the incoming proton remnants must be taken into account.
+This is typically modelled through multiple $2 \rightarrow 2$ scattering occuring at a momentum scale of a few GeV.
+The UE can include additional hard interactions and soft processes which cannot be computed perturbatively.
 
-\subsection{Underlying Event}
+\paragraph{\textbf{Parton Showering}}
+The ME method above works very well to describe hard parton interactions but is unable to correctly simulate the evolving collection of lower energy products that emerge from the products of the hard scatter.
+In a manner similar to how accelerated electric charges radiate bremsstrahlung due to the rules of QED, colored partons emit QCD radiation in the form of gluons.
+These radiated gluons can continue to radiate more gluons or split into quark-antiquark pairs.
+This successive series of radiation/splitting results in a formation termed the ``parton shower'' which follows the evolution of the collision products momenta from the scale defined by the hard-scatter interaction down to the infrared scale at $\approx 1$ GeV at which point QCD becomes non-perturbative and confinement of the partons into hadrons takes place.
 
-\subsection{Tunes}
+\paragraph{\textbf{Hadronization}}
+As the shower approaches the QCD confinement scale $(\Lambda_{\mathrm{QCD}})$ the coupling forces become significant and the outgoing colored partons transform into colorless hadrons with a typical mass scale of $\approx 1$ GeV.
+The hadronization process is also non-perturbative and relies on models which are tuned by experimental data, such as the Lund string model (TODO: CITE) used by \Pythia and clustering models (TODO: CITE) used by \Herwig and \Sherpa.
+%TODO: cite pythia, herwig, and sherpa 
 
-\subsection{Detector Simulation}
-% 
+\paragraph{\textbf{Detector Simulation}}
+To simulate the interaction of the simulated collision products with the ATLAS detector, the simulation results must be passed to a tool such as GEANT 4 (TODO: CITE).
+These detector simulators reproduce the effects of the particles passing through the various layers of the sub-detector components and relies on a detailed specificiation of the geometry, materials, and magnetic field inside the detector.
+The physics processes involved in this detector simulation include ionization, bremsstrahlung, photon conversion, multiple scattering, scintillation, absorption, transition radition, and more.
+The last step in the simulation involves digitizing the output of the various detector components.
+This is necessary to accurately reflect the raw data output of real events from the detector.
+After digitization, simulated events may be fed to the reconstruction algorithms described in Chapter~\ref{ch:reconstruction} and processed exactly as if they were recorded data events.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.75\textwidth]{pp_interaction}
+	\caption{Illustration of an LHC proton-proton collision. © 2011 Chris Blanks}
+	\label{fig:pp_interaction}
+\end{figure}
