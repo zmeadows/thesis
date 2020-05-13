@@ -249,7 +249,7 @@ When a charged particle passes through a portion of the silicon and deposits ene
 These electrons then drift and create a current due a bias voltage that is applied across the silicon.
 The magnitude of the current produced depends on the energy of the incident particle, as more electron-hole pairs are produced for a higher momentum particle.
 
-The reconstruction of particle trajectory is of utmost importance because the curvature of the particle path allows for the determination of both the charge and momentum of the particle.
+The reconstruction of the particle trajectory is of utmost importance because the curvature of the particle path allows for the determination of both the charge and momentum of the particle.
 One of the primary reasons the Inner Detector is situated as the closest subdetector to the beamline is so that it may reconstruct the trajectory of even short-lived particles that decay before reaching the outer layers of the detector.
 This improves the quality of primary and secondary vertex reconstruction \znote{cite vertex reco section}.
 
@@ -343,10 +343,10 @@ The EMEC follows the EMB segmentation design up until the end of tracking accept
 \subsubsection{Hadronic Calorimeters}
 The hadronic calorimeters are composed of two different technologies in different $|\eta|$ regions of the detector.
 In the barrel region $(|\eta| < 1.7)$ resides the Tile Calorimeter composed of alternating layers of plastic active scintillator tiles and steel absorbing tiles.
-Like the EM calorimeter, particle showers are induced by the absorbing layer and and particle showers are produced.
+Like the EM calorimeter, particle showers are induced by the absorbing layer and particle showers are produced.
 Unlike the EM calorimeter, strong force interactions play a role in addition to the electromagnetic interactions, resulting in the presence of hadrons in the showers.
 When these hadrons pass through the plastic scintillator material, photons are emitted and detected by photomultipler tubes (PMTs) in order to produce the electrical signals which are then recorded and converted to an energy measurement.
-The tiler calorimeter is composed of three sections: one central barrel section $(|\eta| < 1.0)$ and two extended barrels sections $(0.8 < |\eta| < 1.7)$.
+The tile calorimeter is composed of three sections: one central barrel section $(|\eta| < 1.0)$ and two extended barrels sections $(0.8 < |\eta| < 1.7)$.
 
 The Hadronic End-Cap (HEC) calorimeter provides hadronic energy measurements in the forward $(1.5 < |\eta| < 3.2)$ region.
 Like the EM calorimeter it uses liquid argon as the active material, but copper plates as the absorbing layer.
@@ -356,7 +356,7 @@ Each wheel of the HEC system is composed of two longitudinal layers, both locate
 \subsubsection{Forward Calorimeter}
 The forward region $(3.1 < |\eta|\ < 4.9)$ is covered by the Forward Calorimeter (FCal) which measures both electromagnetic and hadronic energy.
 The FCal is composed of three concentric cylindrical modules which are themselves composed of a series of rods and tubes, where liquid argon fills the gaps between the rod and tubes as the active medium.
-The first modules (closest to the beam line) uses copper as an absorber and performs the electromagnetic energy measurement, while the second and third modules use tungsten as the absorber and perform the hadronic energy measurement.
+The first modules (closest to the beam line) use copper as an absorber and performs the electromagnetic energy measurement, while the second and third modules use tungsten as the absorber and perform the hadronic energy measurement.
 
 \subsubsection{Calorimeter Resolution}
 The calorimeter energy resolution can be generically parameterized as
@@ -364,7 +364,7 @@ The calorimeter energy resolution can be generically parameterized as
     \frac{\sigma(E_0)}{E_0} = \frac{a}{\sqrt{E_0}} \oplus \frac{b}{E_0} \oplus c
     \label{eqn:calo_res}
 \end{equation}
-where $a$ is a stocastic/sampling term representing an intrinsic resolution limit due to particle fluctuations within the shower, $b$ is a noise term determined primarily by electronics noise and pileup, and $c$ is a constant term which dominates at high incident particle energy which is due to non-linearities in calorimeter response caused by inhomogeneity in detector materials, leakage due to un-absorbed particles from the shower, and calibration imperfections.
+where $a$ is a stochastic/sampling term representing an intrinsic resolution limit due to particle fluctuations within the shower, $b$ is a noise term determined primarily by electronics noise and pileup, and $c$ is a constant term which dominates at high incident particle energy which is due to non-linearities in calorimeter response caused by inhomogeneity in detector materials, leakage due to un-absorbed particles from the shower, and calibration imperfections.
 Each of these quantities $a$, $b$, and $c$ depend on the specific calorimeter detector technology under consideration.
 The $\oplus$ operator denotes that each contributing term is summed in quadrature to estimate the final resolution.
 
@@ -451,7 +451,7 @@ The RPC chambers are attached to the MDT chambers in the barrel and cover the ce
 The CSC chambers replace the MDTs in the forward region of the first barrel layer of the MS in order to account for the high interaction rate in this region that would otherwise cause significantly degraded performance of the MDTs in this region ($2 < |\eta| < 2.7)$).
 The CSC detector region is organized into two disks of sixteen chambers each.
 Each CSC chamber consists of both a multi-wire proportional drift chamber as well as interleaved cathode strips placed parallel and perpendicular to the anode multi-wire layers.
-The parallel cathode strips provide precision tracking measurement in the bending plane, while the perpendicular cathode strips provide measured of $\phi$.
+The parallel cathode strips provide precision tracking measurement in the bending plane, while the perpendicular cathode strips provide measurements of $\phi$.
 
 The TGC chambers are similar to the CSC chambers in design and consist of 50 $\mu m$ gold-plated tungsten anode wires, but with smaller gaps between electrodes for faster readouts.
 They only provide measurement of the $\phi$ coordinate and cover the $1.0 < |\eta| < 2.4$ region.
@@ -470,8 +470,8 @@ They only provide measurement of the $\phi$ coordinate and cover the $1.0 < |\et
 \subsection{Trigger and DAQ}
 The LHC currently operates at a collision rate of 40 MHz.
 Given that each event requires approximately 1.5 MB of disk storage, it is impractical to attempt to record every collision event observed by the ATLAS detector.
-Not only would this would require a bandwidth of $> 60$ TB/s, but most events are not of any serious interest to HEP research efforts.
-For this reason the ATLAS trigger system \cite{Ruiz-Martinez:2133909} is used to reduce the recorded event rate to a more manageable level of approximately 1-2 KHz, which reduces the bandwidth requirement to GB/s or less.
+Not only would this require a bandwidth of $> 60$ TB/s, but most events are not of any serious interest to HEP research efforts.
+For this reason the ATLAS trigger system \cite{Ruiz-Martinez:2133909} is used to reduce the recorded event rate to a more manageable level of approximately 1-2 KHz, which reduces the bandwidth requirement to 1~GB/s or less.
 The trigger system operates in real-time at both hardware and software levels and ensures only events of interest to ongoing research are recorded by the ATLAS data acquisition system (DAQ).
 For Run-2 ATLAS uses a two-tier trigger system: a hardware-based ``level-1'' (L1) trigger followed by a software based ``high-level'' (HLT) trigger.
 Each trigger in the chain significantly reduces the data rate.
@@ -481,7 +481,7 @@ A schematic of the full ATLAS trigger/DAQ system is shown in Fig.~\ref{fig:trigg
 \begin{figure}
 	\centering
 	\includegraphics[width=0.8\textwidth]{atlas_trigger_system}
-	\caption{Schematic layout of the ATLAS trigger and data scquisition system for Run-2. \cite{Ruiz-Martinez:2133909}}
+	\caption{Schematic layout of the ATLAS trigger and data acquisition system for Run-2. \cite{Ruiz-Martinez:2133909}}
 	\label{fig:trigger_system}
 \end{figure}
 
@@ -495,8 +495,8 @@ A newer hardware-based L1 trigger labeled L1Topo actually analyzes kinematic/geo
 
 The Central Trigger Processor (CTP) receives all the information in real-time from the L1Muon, L1Calo, and L1Topo processors.
 The CTP first synchronizes the trigger inputs with the LHC collision clock in order to correctly associate each event with the correct bunch crossing.
-All trigger inputs are then compared to different sets of trigger thresholds defined for each separate type of physics beind targeted by ATLAS.
-The choice of trigger thresholds are ultimately determined by the maximum allowed L1 output rate of 100 KHz, which represents a factor of 400 reduction from the 40 MHz event rate at the LHC.
+All trigger inputs are then compared to different sets of trigger thresholds defined for each separate type of physics being targeted by ATLAS.
+The choice of trigger thresholds is ultimately determined by the maximum allowed L1 output rate of 100 KHz, which represents a factor of 400 reduction from the 40 MHz event rate at the LHC.
 If any set of trigger thresholds are passed, the CTP flags the event as accepted and notifies all sub-detectors.
 Upon receiving this ``L1 Accept'' (L1A) notification, all the data from each sub-detector is read out and propagated to the next step in the trigger process: the High Level Trigger.
 \znote{mention ROIs}
@@ -509,7 +509,7 @@ Since the HLT is software based it is limited primarily by the CPU processing ti
 An example of such an optimization is that track reconstruction \znote{cite tracking section} is only performed within ROIs identified by the L1 trigger.
 
 \subsection{Computing}
-The raw data for all events passing the ATLAS trigger system is sent to CERN Data Center where the process of archiving, distributing, processing and analyzing begins.
+The raw data for all events passing the ATLAS trigger system is sent to the CERN Data Center where the process of archiving, distributing, processing and analyzing begins.
 However, this is only the starting point of an international network of LHC computing resources \cite{Bird:1447125} known as the Worldwide LHC Computing Grid (WLCG) or simply ``the grid''.
 The WLCG is a layered system made up of four separate ``tiers'' as shown in Fig.~\ref{fig:wlcg_tiers}.
 
@@ -526,5 +526,5 @@ They are responsible for large-scale reprocessing, storage and safe-keeping of a
 Furthermore, Tier-1 centers share these resources with the next link in the chain (Tier-2).
 Tier-1 centers are typically national laboratories such as BNL, INFN, and TRIUMF.
 
-The next link in the chain (\textbf{Tier-2}) is composed primarily of universities and other scientific institutions which posses enough storage and computing power for a combination of analysis tasks, simulated event production and reconstruction.
-Individual scientists connect to the grid via the last tier (\textbf{Tier-3}) which consists of local computing resources such as small local clusters belonging to individual Physics departments or event individual PCs.
+The next link in the chain (\textbf{Tier-2}) is composed primarily of universities and other scientific institutions which possess enough storage and computing power for a combination of analysis tasks, simulated event production and reconstruction.
+Individual scientists connect to the grid via the last tier (\textbf{Tier-3}) which consists of local computing resources such as small local clusters belonging to individual Physics departments or even individual PCs.

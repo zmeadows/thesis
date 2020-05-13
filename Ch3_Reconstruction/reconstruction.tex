@@ -24,10 +24,10 @@ The tracking procedure for ATLAS is divided into four separate stages \cite{Salz
 
 \begin{enumerate}
     \item \textbf{Data Preparation and Space Point Formation}\\
-        When a charged particle passes thorugh the active silicon material of the various ID sub-detectors, it leaves behind \textit{clusters} of 
+        When a charged particle passes through the active silicon material of the various ID sub-detectors, it leaves behind \textit{clusters} of 
         raw data output spanning multiple nearby sensors of the various ID sub-detectors.
         The first tracking stage consists of finding these connected clusters and associating them together into a single three-dimensional location.
-        This difficulty of this process is compounded by the fact that nearby particle trajectories in dense environments can often \textit{merge} together into the same cluster.
+        The difficulty of this process is compounded by the fact that nearby particle trajectories in dense environments can often \textit{merge} together into the same cluster.
         This necessitates the use of a neural network based cluster splitting routine for the Pixel detector.
         After clusters are identified and (potentially) split, their locations are transformed from the local subdetector cooordinate system to the global ATLAS coordinate system and referred to as \textit{space points}.
     \item \textbf{Space Point Seeded Track Finding}\\
