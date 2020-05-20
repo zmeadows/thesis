@@ -1,6 +1,7 @@
 \graphicspath{{Ch1_Theory/figures/}}
 
 \chapter{Theoretical Framework}
+%TODO: mention c=1 particle physics convention somewhere
 
 The Standard Model (SM) of particle physics is the most successful theory in the history of human scientific endeavour.
 It provides a unified framework describing the electroweak and strong interactions along with all known particles that participate in those interactions.
@@ -132,7 +133,7 @@ A Yang-Mills theory can be expanded by embedding more fields into Minkowski spac
 where $\left\{ \boldsymbol\Psi \right\}$ is some set of new ``matter fields'' which transform under the fundamental representation of the internal symmetry group.
 The new $\mathcal{L}_m$ term must be Poincar\'{e} and gauge invariant, which can be achieved by judicious use of bilinear covariants and substitution of the standard spacetime derivative $\partial_\mu$ with the covariant derivative $D_\mu$.
  
-\subsection{$U(1)$}
+\paragraph{$U(1)$}
 The \textbf{circle group} $U(1)$ is abelian and its corresponding Lie Algebra is just the real numbers. It follows that $f^a_{\ bc} = 0$ and 
 $F_{\mu\nu} = \partial_\mu A_\nu - \partial_\nu A_\mu$, with only a single connection coefficient $A_\mu(x)$.
 Utilizing the Dirac Lagrangian we construct a new Lagrangian for $N$ fermions coupled to the $U(1)$ gauge field.
@@ -143,7 +144,7 @@ which is the familiar Lagrangian of QED where $A_\mu$ is the photon field and $\
 Of importance is that any coupling between the different fermions would break gauge invariance and is not allowed.
 Thus in order to explain radioactive decay, for example, this $U(1)$ symmetry group must clearly be expanded.
 
-\subsection{$SU(2)$}
+\paragraph{$SU(2)$}
 The \textbf{special unitary} group $SU(2)$ is non-abelian, so the structure constants in the expression for $F_{\mu\nu}$ do not vanish.
 The generators of $SU(2)$ are $t_a \equiv -\frac{i}{2}\sigma_a$, where $\sigma_a$ are the \textit{Pauli matrices}, and $f^a_{\ bc} = \epsilon^a_{\ bc}$, the Levi-Civita symbol (\textbf{not} the Levi-Civita \textit{tensor}).
 In the fundamental representation of $SU(2)$ we now have $N$ fermion doublets $\Psi_j = \left( \psi_1^{(j)} , \psi_2^{(j)} \right)$.
@@ -156,9 +157,10 @@ There are a few major problem with this idea.
 The most immediate of which is that if $\psi_1$ and $\psi_2$ have different masses,
 splitting the mass term up as $\Psi_j \bigl(\begin{smallmatrix} m_1&0 \\ 0&m_2 \end{smallmatrix}\bigr) \Psi_j^T$ is not gauge invariant.
 
-\subsection{$SU(2) \times U(1)$}
-\subsection{$SU(3)$}
-\subsection{$SU(3)_c \times SU(2)_L \times U(1)_Y$}
+\paragraph{$SU(2) \times U(1)$}
+\paragraph{$SU(3)$}
+\paragraph{$SU(3)_c \times SU(2)_L \times U(1)_Y$}
+
 \section{Electroweak Symmetry Breaking}
 \section{Renormalization}
 \section{Beyond the Standard Model}
@@ -172,7 +174,8 @@ In order to achieve this, the ATLAS experiment utilizes simulation based on Mont
 
 The ATLAS MC simulation proceeds in a serial manner where each step relies only on the output of the prior step.
 An example illustration of a common $pp$ collision event outlining these steps is shown in Fig.~\ref{fig:pp_interaction}.
-These steps are (in order): %TODO: add basic one-sentence description of each of these
+% TODO: find better figure here, it doesn't show hadronization...
+These steps are (in order):
 \begin{enumerate}
     \itemsep0em 
     \item Hard Scatter Event Generation
@@ -181,6 +184,8 @@ These steps are (in order): %TODO: add basic one-sentence description of each of
     \item Hadronization
     \item Detector Simulation
 \end{enumerate}
+
+%TODO: mention some of the common software used here: ex MadGraph and Pythia
 
 \paragraph{\textbf{Hard Scatter Event Generation}}
 Simulation begins with the hard-scatter process, or in other words, evaluation of a set of Feynman diagrams for some particular $2 \rightarrow n$ process.

@@ -10,6 +10,7 @@ Jets are reconstructed by employing \textit{jet clustering algorithms} which tak
 At the ATLAS experiment jets may be constructed using only tracks as inputs, only calorimeter clusters and inputs, or a combination of both.
 
 \section{Jet Constituents}
+\label{sec:jet_constituents}
 All jet clustering algorithms take as input a set of four-vectors representing all the products of parton showering and hadronization, known as \textit{constituents}.
 These constituents compose \textit{all} the potential jets in the event, and it is the job of the jet clustering algorithm to convert these to a set of four-vectors representing only the corresponding jets from the event.
 These constituents can be created with information from any particular ATLAS sub-detector or combination thereof, as long as they encode the four-vectors of the particles produced during the jet showering/hadronization process.
@@ -50,6 +51,7 @@ Since jet clustering algorithms are indifferent to the origin of the inputs, onl
 In particular, utilizing ID information during jet clustering allows for a more detailed view of the internal structure of jets, which is particularly useful in the context of jet substructure (Section \ref{sec:jet_substructure}) and $b$-tagging (Section \ref{sec:btagging}).
 
 \subsection{Track-Calo Clusters}
+\label{sec:tcc_constituents}
 % cite combined mass as first step towards TCCs
 \newcommand{\mCALO}{\ensuremath{m^{\mathrm{calo}}}}
 \newcommand{\mTRACK}{\ensuremath{m^{\mathrm{track}}}}
@@ -173,21 +175,42 @@ This introduces a strong sensitivity to small fluctuations of the energy density
 For this reason it is rarely used in a modern context.
 The \textit{Cambridge-Aachen} (C/A) algorithm \cite{Dokshitzer:1997in} for $P=0$ works only with the angular component of the jets by sorting the objects without any reference to $p_T$ in $d_{ij}$.
 
-The \textit{Anti}-$k_T$ algorithm \cite{Cacciari:2008gp} for $P = -1$ causes soft particles to cluster together with nearby hard particles before they cluster between themselves. 
+The \textit{anti}-$k_T$ algorithm \cite{Cacciari:2008gp} for $P = -1$ causes soft particles to cluster together with nearby hard particles before they cluster between themselves. 
 This reduces sensitivity to small fluctuations of energy within the parton shower, the primary (undesirable) characteristic of the $k_T$ algorithm.
 This property causes a hard particle with no hard neighbors within a distance of $2R$ to accumulate all nearby soft particles within a circle of radius $R$.
-This leads to a stability in jet area which is helpful for jet calibration and analysis, which has resulted in Anti-$k_T$ being used as the default algorithm for the majority of ATLAS research.
-
-%TODO: describe VR jet algorithm
-
+This leads to a stability in jet area which is helpful for jet calibration and analysis, which has resulted in anti-$k_T$ being used as the default algorithm for the majority of ATLAS research.
 
 The choice of jet clustering algorithm parameters as well as constituent type depends in part upon the physics analysis goals in question.
 In particular circumstances two separate jet algorithms may be used to reconstruct the same event to pick out separate features.
-For example, for identifying the decay products of the two-pronged decay of a Standard Model vector boson ($W/Z \rightarrow q\bar{q}^{(\prime)}$), the Anti-$k_T$ algorithm with a large radius parameter of $R$ = 1 is used to capture the full jet corresponding to the inclusive $W/Z$ decay.
-However, the Variable Radius (VR) clustering algorithm with a smaller radius parameter can be used to capture the features of the jets corresponding to the individual quark jets.
-This is the strategy followed by the analysis covered in this thesis.
+For example, for identifying the decay products of the two-pronged decay of a Standard Model vector boson ($W/Z \rightarrow q\bar{q}^{(\prime)}$), the anti-$k_T$ algorithm with a large radius parameter of $R$ = 1 is used to capture the full jet corresponding to the inclusive $W/Z$ decay.
+However, jets with a smaller radius parameter can be used to capture the features of the jets corresponding to the individual quark jets.
+
+In particular for the case of capturing and reconstructing the $b$-quarks from a $H \rightarrow b\bar{b}$ decay, a special modification the jet clustering algorithms discussed above can be made to produce jets with variable radius (VR) \cite{Krohn:2009zg}.
+This entails modifying the radius parameter $R$ to depend on jet $p_T$ in the following way:
+\begin{equation}
+R \rightarrow R_{\mathrm{eff}}(p_T) \equiv \frac{\rho}{p_T}
+\end{equation}
+where the new constant parameter $\rho$ determines how quickly the effective jet size decreases as the jet $p_T$ increases.
+Additionally the VR jet clustering algorithm also imposes a minimum ($R_{\mathrm{min}}$) and maximum ($R_{\mathrm{max}}$) bound on the radius which prevents the jet radii from becoming pathologically small or large.
+
+In practice the VR modification has only been widely used on ATLAS for anti-$k_T$ jets reconstructed with track constituents, in particular for reconstructing the individual $b$-jets from an $H \rightarrow b\bar{b}$ decay process.
+The values $\rho = 30$ GeV, $R_{\mathrm{min}} = 0.02$, and $R_{\mathrm{max}} = 0.4$ are used in ATLAS and were derived by scanning each parameter for simulated Higgs jets and maximizing the truth $b$-quark matching efficiency for each subjet as shown in Figure~\ref{fig:vr_jet_optimization}.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{vr_jet_optimization}
+	\caption{
+	Efficiency of subjet double $b$-labelling at the truth level for Higgs jets as a function of Higgs jet $p_T$.
+	(a) The efficiency for VR track jets with $R_{\mathrm{min}} = 0.02$ and $R_{\mathrm{max}} = 0.4$ for several different $\rho$ values.
+	(b) The efficiency for VR track jets with $\rho = 30$ GeV and $R_{\mathrm{max}} = 0.4$ for several different values of $R_{\mathrm{min}}$
+	(b) The efficiency for VR track jets with $\rho = 30$ GeV and $R_{\mathrm{min}} = 0.02$ for several different values of $R_{\mathrm{max}}$
+	The efficiency for standard $R = 0.2$ track jets is also included in all of the plots.
+	}
+	\label{fig:vr_jet_optimization}
+\end{figure}
 
 \section{Calibration}
+\label{sec:jet_calibration}
 The jets reconstructed by any particular clustering algorithm may not correctly match the true four-vector of the original parton.
 There are a number of factors responsible for this, such as:
 \begin{itemize}
