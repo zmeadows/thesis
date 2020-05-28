@@ -22,7 +22,7 @@ The SM fields fall into four main categories:
     \item The Higgs field, $\varphi$.
 \end{enumerate}
 
-The dynamics of these fields are predicted via the mathematical framework of Quantum Field Theory (QFT).
+The dynamics of these fields and their interactions are predicted via the mathematical framework of Quantum Field Theory (QFT).
 In this chapter a compact but complete overview of the mathematical framework of the Standard Model is given.
 
 \section{Minkowski Spacetime}
@@ -90,11 +90,10 @@ One the Lagrangian is defined, arriving at the resulting physical predictions is
 %TODO: Noethers theorem paragraph
 %TODO: Explain feynman diagrams, vertices, and tree-level
 
-The core job of the theoretical particle physicist is to construct a Lagrangian in such a way as to match and/or predict experimental results.
+One important job of the theoretical particle physicist is to construct a Lagrangian in such a way as to match and/or predict experimental results.
 In order to construct a Lagrangian one must put constraints on what type of objects are allowed to enter into the expression and how those objects can be used in the expression.
 Following from work of Eugene Wigner [NEEDREF], all the mathematical structures (fields) used to describe particles in the Standard Model must be part of a positive-energy irreducible unitary representation of the Poincar\'{e} group.
 %TODO: define these qualifiers
-This constrains the type of objects that are allowed in a Lagrangian.
 This subset of the Poincar\'{e} group representations can be indexed by two properties possessed by every fundamental particle: mass\footnote{The mass of a particle can of course be zero.} (a non-negative number) and spin (an integer or half integer such as 0, 1/2, 1, 3/2, \dots).
 The Lagrangian encodes the laws of physics for a particular theory, and we know that the laws of physics must be invariant under Poincar\'{e} transformations as discussed in the previous section.
 Therefore the Lagrangian itself must be invariant under these transformations.
@@ -103,17 +102,16 @@ This severely restricts the types of terms that can be allowed in the Lagrangian
 Particles in the SM have \textit{internal} properties which must be encoded in the Lagrangian as well.
 This means that the symmetry group under which the Lagrangian is invariant must actually be defined by the \textit{direct product} of multiple groups, with some encapsulating global properties of spacetime itself (global symmetries), and others encoding the internal degrees of freedom of the particles embedded in this spacetime (local symmetries).
 There are three predominant local symmetries in the SM and each one is associated with special properties of a particular subset of SM particles.
-These local symmetries arise through the electromagnetic force associated with the $U(1)$ group, the weak force associated with the $SU(2)$ group, and the strong force associated with the $SU(3)$ group, all of which are covered later in this chapter.
+These local symmetries arise through the electromagnetic force associated with the $U(1)$ group, the weak force associated with the $SU(2)$ group, and the strong force associated with the $SU(3)$ group.
 
 %TODO: mention scalar/vector/spinor representations used in the standard model and which group they correspond to
 %TODO: mention that fields are really operators without a strength
 
 \section{Gauge Invariance}
-Local symmetries manifest themselves in the Lagrangian through a requirement called \textbf{gauge invariance}.
+Local symmetries lead to presence force-carrying particles in the Lagrangian through a requirement called \textbf{gauge invariance}.
 A \textbf{gauge} is a particular choice of values for any redundant degrees of freedom underlying the mathematical formalism of a local symmetry group.
 A \textbf{gauge transformation} is a simultaneous change in these redundant degrees of freedom.
 A \textbf{gauge theory} is a physical model based on a Lagrangian to which gauge transformations can be applied, but with the important caveat that the \textit{physical predictions remain the same} regardless of which gauge is used.
-
 The motivation for the concepts underlying gauge theory are largely analogous to the intuitive notion that physical predictions in classical mechanics remain the same regardless of which inertial frame of reference is used to perform the calculation.
 % mention t'hooft gauge, epsilon gauge, etc
 
@@ -200,7 +198,7 @@ Einstein summation notation is assumed throughout.
 
 \section{Yang-Mills Theory}
 With the covariant derivative we can construct the \textbf{curvature form} $F_{\mu\nu} \equiv \frac{1}{g} \comm{D_\mu}{D_\nu}$.
-A simplified picture of the curvature is that it encodes the \textit{strength} and geometric properties of the gauge field $A_\mu$ at a specific point in spacetime.
+A simplified picture of the curvature is that it encodes the \textit{strength} and geometric properties of the gauge field $A_\mu$ at each point in spacetime.
 For this reason, the curvature is usually referred to as the \textbf{field strength tensor} in physics and is always part of the Lagrangian.
 
 The starting point for constructing the Standard Model is Yang-Mills gauge theory, which finds its fullest and most beautiful expression in the language of differential geometry.
@@ -227,7 +225,7 @@ A Yang-Mills theory can be expanded by embedding more fields into Minkowski spac
 \begin{equation}
     \mathcal{L} = \YM + \YML
 \end{equation}
-where $\left\{ \boldsymbol\Psi \right\}$ is some set of new which transform under the fundamental representation of the internal symmetry group and couple to the force-carrying particle associated with the relevant local symmetry.
+where $\left\{ \boldsymbol\Psi \right\}$ is some set of new fields which transform under the fundamental representation of the internal symmetry group and couple to the force-carrying particle associated with the relevant local symmetry.
 The new $\mathcal{L}_m$ term must be Poincar\'{e} and gauge invariant as well, which can be achieved by judicious use of bilinear covariants and substitution of the standard spacetime derivative $\partial_\mu$ with the covariant derivative $D_\mu$.
 
 \section{The Standard Model}
@@ -254,12 +252,13 @@ The combined $SU(2) \otimes U(1)$ component of the Standard Model is known as th
 The Lagrangian density for the electroweak interaction is given by
 \begin{align}
     \mathcal{L}_{\mathrm{EW}} &= \sum_{\Psi}  \bar{\Psi}  (i \gamma^\mu D_\mu) \Psi - \frac{1}{4} W_a^{\mu\nu} W^a_{\mu\nu} - \frac{1}{4} B^{\mu\nu}_{\mu\nu} \\
-    D_\mu &= \partial_\mu - i \frac{g'}{2} Y B_\mu - i \frac{g}{2} T_a W_\mu^a
+    D_\mu &= \partial_\mu + i g T_a W_\mu^a + i \frac{g'}{2} B_\mu + 
+    \label{eq:ew_deriv}
 \end{align}
 where $W^a_{\mu\nu}$ for $a \in (1,2,3)$ are field strength tensors for the local $SU(2)$ symmetry called \textbf{weak isospin}, $B^{\mu\nu}$ is the field strength tensor for the local $U(1)$ symmetry called \textbf{weak hypercharge}.
 The fields $W_\mu^j$ and $B_\mu$ are the corresponding connection coefficients for weak isospin and hypercharge, with coupling constants factored out as $g$ and $g'$. Note that here we use the same base symbol ($W$ and $B$) for both the connection coefficients and field strength tensor, whereas previously we used separate symbols: $F_{\mu\nu}$ and $A_\mu$.
-The generators of $SU(2)$ and $U(1)$ are given by $T_a$ and $Y$, respectively.
-Due to the simplicity of the $U(1)$ group, $Y$ is simply a real number, whereas $T_a$ for $a \in (1,2,3)$ are the $2\times2$ Pauli matrices.
+The generators of $SU(2)$ are given by $T_a$ and $Y$, respectively.
+Due to the simplicity of the $U(1)$ group, $Y$ is simply a real number and can be omitted, whereas $T_a$ for $a \in (1,2,3)$ are the $2\times2$ Pauli matrices.
 The $\Psi$ fields are the fermions which are represented as \textit{spinors} in the SM, which necessitates the use of the \textbf{gamma matrices} $\gamma^\mu$ to apply the covariant derivative $D_\mu$.
 %TODO: add footnote describing spinors
 
@@ -280,10 +279,6 @@ Thus the $\Psi$ fields outlined above are a combination of $SU(2)$ doublets for 
 \end{equation}
 where the index $i \in (1,2,3)$ runs over the three families of quarks/leptons.
 The left-handed double quark fields in $\Psi$ are not the same as the quark fields under the strong interaction, but rather a mixture of them, which are related by the Cabibbo-Kobayashi-Maskawa (CKM) matrix. %TODO cite
-Furthermore, there are no mass terms ($-m_\Psi^2 \Psi^2$) for the fermions in $\mathcal{L}_{\mathrm{EW}}$, as this would break local gauge invariance.
-In order to incorporate fermion mass into the SM one must introduce the Higgs boson.
-
-\subsection{Higgs Mechanism}
 
 \subsection{Strong Interaction}
 
@@ -292,8 +287,8 @@ In order to incorporate fermion mass into the SM one must introduce the Higgs bo
     D_\mu &= \partial_\mu - i g_s A_\mu^a T_a
 \end{align}
 where $G_a^{\mu\nu}$ is the field strength tensor for $SU(3)$, $T_a$ are the generators of $SU(3)$, and $g_s$ is the coupling constant for the strong force.
-The connection coefficients $A_\mu^a$ are the eight\footnote{The $SU(N)$ group has $n^2-1$ generators.} massless gluon gauge bosons.
-The quark fields $\Psi_g$ are a three-dimensional vector representation of the Poincar\'{e} group which transforms under $SU(3)$, where the three dimensions are indexed\footnote{The choice of red, green, and blue \textit{colors} to index the vector representation is arbitrary.} by \textbf{color charge}:
+The connection coefficients $A_\mu^a$ are the eight\footnote{The $SU(N)$ group has $n^2-1$ generators, thus $SU(3)$ has $3^2 - 1 = 8$ generators.} massless gluon gauge bosons.
+The quark fields $\Psi_g$ are a three-dimensional vector representation of the Poincar\'{e} group which transforms under $SU(3)$, where the three dimensions are indexed\footnote{The choice of red, green, and blue \textit{colors} to index the vector representation is arbitrary. In the words of Richard Feynman: \textit{The idiot physicists, unable to come up with any wonderful Greek words anymore, call this type of polarization by the unfortunate name of 'color,' which has nothing to do with color in the normal sense.}} by \textbf{color charge}:
 \begin{equation}
     \Psi_q \equiv 
     \begin{pmatrix}
@@ -303,7 +298,7 @@ The quark fields $\Psi_g$ are a three-dimensional vector representation of the P
     \end{pmatrix}\;
 \end{equation}.
 
-After expanding $\mathcal{L}_{\mathrm{QCD}}$ there are three types of vertices: $ggg$ and $gq\bar{q}$ (proportional to $g_s$) and $gggg$ (proportional to $g_s^2$).
+After expanding $\mathcal{L}_{\mathrm{QCD}}$ there are three types of interaction vertices: $ggg$ and $gq\bar{q}$ (proportional to $g_s$) and $gggg$ (proportional to $g_s^2$).
 The ``strength'' of the strong interaction is most-often described not in terms of $g_s$, but rather $\alpha_s \equiv \frac{g_s}{4\pi}$.
 In fact this coupling ``constant'' $\alpha_s$ is not constant at all.
 Due the peculiarities of quantum processes, all coupling constants depend on the energy scale of the interaction under consideration.
@@ -340,6 +335,78 @@ Experimental results for $\alpha_s$ are shown in Figure~\ref{fig:alpha_s_measure
 This result shows that $\alpha_s$ \textit{decreases} as the interaction scale increases, in stark contrast to the other interactions of the SM.
 Thus in the very high energy regime, QCD interactions become weaker, a phenomenon known as \textbf{asymptotic freedom}. %TODO: cite
 The inverse phenomenon, strong coupling in the low-energy regime, is known as \textbf{confinement}.
+
+\subsection{Higgs Mechanism}
+So far there are no mass terms, such as $-m_\Psi^2 \Psi^2$ for the fermions, in $\mathcal{L}_{\mathrm{EW}}$ or $\mathcal{L}_{\mathrm{QCD}}$.
+In all cases these terms would break local gauge invariance if no other changes were made.
+The solution to this problem is the inclusion of a complex-valued scalar\footnote{Scalar here means the Higgs field transforms as a scalar under Poincar\'{e} transformations. This is distinctly different than the left-handed fermions, though they are also $SU(2)$ doublets but transform as spinors.} field in an $SU(2)$ doublet representation called the Higgs boson.
+\begin{align}
+    \mathcal{L}_{\mathrm{H}} &= \left|D_\mu \Phi\right|^2 - \mu^2 \Phi^\dag \Phi + \lambda \left(\Phi^\dag \Phi \right)^2 \\
+    \Phi &= 
+    \begin{pmatrix}
+    \phi^+ \\
+    \phi^0 \\
+    \end{pmatrix}
+\end{align}
+where $D_\mu$ is the covariant derivative for the electroweak interaction as specified in Eq.~\ref{eq:ew_deriv}.
+The last two terms in $\mathcal{L}_{\mathrm{H}}$ define the Higgs potential, restricted to this form by the requirement that any new terms added to the SM Lagrangian density be both renormalizeable and invariant under the local $SU(2) \otimes U(1)$ symmetry group.
+
+For the vacuum to be stable $\lambda$ must be greater than zero. For the case where $\mu^2 > 0$ the scalar field $\Phi$ develops\footnote{It is important to note here that there is no mathematical motivation for the value of $\mu$ and the presence of this vacuum expectation value for the Higgs field. This is a case where the Lagrangian is constrained by experimental observations rather than mathematical constraints.} a non-zero \textbf{vacuum expectation value} $\langle \Phi \rangle$.
+Since the potential only depends on $\Phi^\dag \Phi$ there are an infinite number of degenerate states with minimum energy $\frac{\nu^2}{2}$ corresponding to this energy state.
+Due to the degeneracy and $SU(2)$ gauge invariance we can freely choose to write $\langle \Phi \rangle$ in a convenient form:
+\begin{equation}
+\langle \Phi \rangle = \frac{1}{\sqrt{2}} 
+    \begin{pmatrix}
+    0 \\
+    \nu \\
+    \end{pmatrix}
+\end{equation}
+and then by expanding around this minimum the Higgs field can be written as
+\begin{equation}
+\Phi(x) = \frac{1}{\sqrt{2}} 
+    \begin{pmatrix}
+    0 \\
+    \nu  + h(x) \\
+    \end{pmatrix}.
+\end{equation}
+
+This way of encoding the Higgs field is called the \textit{unitary gauge}.
+The remaiing scalar field $h(x)$ is the massive, electrically neutral spin-0 Higgs boson. %TODO: cite
+The usefulness of the unitary gauge is apparent when expanding the term from $\mathcal{L}_{\mathrm{H}}$ involving the covariant derivative:
+\begin{align}
+    \left|D_\mu \Phi\right|^2 &= \left| \left( \partial_\mu + i \frac{g'}{2} Y B_\mu + i \frac{g}{2} T_a W_\mu^a \right) h(x) \right|^2 \\
+    &= \frac{\nu^2}{8} \left[
+     g^2 \left\{ (W^1_\mu)^2 + (W_\mu^2)^2 \right\}^2 + (gW^3_\mu - g' B_\mu)^2
+    \right].
+\end{align}
+At this stage one can define new fields as linear combinations of the previous $B_\mu$ and $W^a_\mu$ fields to simplify the above expression:
+\begin{align}
+    W_\mu^\pm &\equiv \frac{1}{\sqrt{2}} \left( W^1_\mu \mp i W^2_\mu \right) \\
+    Z_\mu &\equiv \frac{1}{\sqrt{g^2 + g^{\prime 2}}} \left( g W^3_\mu - g' B_\mu \right) \\
+    A_\mu &\equiv \frac{1}{\sqrt{g^2 + g^{\prime 2}}} \left( g' W^3_\mu + g B_\mu \right)
+\end{align}
+where each of these new fields now have familiar $\frac{m^2}{2}\psi^2$-type mass terms in the Lagrangian, leading specifically to masses of:
+\begin{align}
+    m_{W^\pm} &= \frac{g\nu}{2}, \\
+    m_{Z} &= \frac{\nu}{2}\sqrt{g^2 + g^{\prime 2}}, \\
+    m_{A} &= 0.
+\end{align}
+
+By choosing this gauge three of the four real scalar fields of $\Phi$ have disappeared, but they have re-emerged as components of the new $W$, $Z$, and $A$ fields which correspond to the Standard Model weak $W^\pm$/$Z$ bosons and the photon $A$.
+This process just described by which the ground state of the Higgs field $\Phi$ breaks the $SU(2) \otimes U(1)$ gauge symmetry is called \textbf{spontaneous symmetry breaking}.
+
+Even though the entire Lagrangian still retains $SU(2) \otimes U(1)$ symmetry, if re-written in terms of perturbations \textit{around} the asymmetric vacuum state, the Lagrangian re-organizes itself to represent a different set of particles.
+Do not be mislead though, it is still the same Standard Model Lagrangian that describes the fundamental particle interactions (except gravity) both before and after spontaneous symmetry breaking, it is only the ``ground state'' of the universe that changes.
+The general consensus is that the spontaneous breaking of the $SU(2) \otimes U(1)$ symmetry by the accumulation of $\langle \Phi \rangle$ is an event that actually occurred during the early moments following the big bang, specifically when the temperature dropped below $159.5 \pm 1.5$ GeV \cite{DOnofrio:2015gop}.
+
+So far we have only shown how spontaneous symmetry breaking gives rise to the masses of the gauge bosons $W^\pm$, $Z$ and $A$.
+In order to incorporate mass terms for the fermions, new terms must be added to the Lagrangian which involve the coupling of the Higgs field to the left \textit{and} right-handed fermions with the form proportional to $\bar{\Psi}_L h \Psi_R$.
+The reason these new coupling terms must be added is simple: because they are \textit{possible} under all the contraints of gauage invariance and renormalization, thus we cannot ignore them.
+These new terms involve the \textbf{Yukawa coupling constants} $f_\Psi$ for each fermion, and after spontaneous symmetry breaking contribute fermion mass terms to the SM Lagrangian with the following form:
+\begin{equation}
+\mathcal{L}_{\mathrm{Yuk}} = \frac{f_\Psi \nu}{\sqrt{2}} \left( \bar{\Psi}_L \Psi_R + \bar{\Psi}_R \Psi_L \right)
+\end{equation}
+for each fermion $\Psi$ where $m_\Psi = \frac{f_\Psi \nu}{\sqrt{2}}$.
 
 \section{Hadronic Collisions}
 An accurate mathematical description of the physics processes in a $pp$ collision, such as the example outlined in Figure~\ref{fig:proton_collision_complications}, is extremely complicated.
