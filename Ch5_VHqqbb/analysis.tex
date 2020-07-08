@@ -3,7 +3,7 @@
 \chapter{Fully-Hadronic VH Resonance Search}
 
 \section{Overview}
-This thesis presents the ATLAS search for new resonances decaying to a vector boson ($V = W,Z$) and a Higgs boson $H$, in the fully hadronic channel where both the $H$ and $V$ boson decay to quarks producing a $q\bar{q}^{(\prime)}b\bar{b}$ final state\footnote{The specific final states are $W \rightarrow q \bar{q}^\prime$, where the prime symbol denotes that the quark and anti-quark have different flavor, and $Z \rightarrow q\bar{q}$, where both the quark and anti quark have the same flavor. The expression $q\bar{q}^{(\prime)}b\bar{b}$ is used to denote the general final state resulting from either $W$ or $Z$ boson decay.}.
+This thesis presents the ATLAS search for new resonances decaying to a vector boson ($V = W,Z$) and a Higgs boson $H$, in the fully hadronic channel where both the $H$ and $V$ boson decay to quarks producing a $q\bar{q}^{(\prime)}b\bar{b}$ final state\footnote{The specific final states are $W \rightarrow q \bar{q}^\prime$, where the prime symbol denotes that the quark and anti-quark have different flavor, and $Z \rightarrow q\bar{q}$, where both the quark and anti-quark have the same flavor. The expression $q\bar{q}^{(\prime)}b\bar{b}$ is used to denote the general final state resulting from either $W$ or $Z$ boson decay accompanied by an $H \to b\bar{b}$ decay.}.
 This search focuses on new resonances with mass $\geq 1.5$~TeV.
 In terms of the $H$ and $V$ decay products, the mass of such a resonance can be written as
 \begin{equation}
@@ -15,6 +15,16 @@ In terms of the $H$ and $V$ decay products, the mass of such a resonance can be 
 \end{equation}
 where the common particle physics convention of setting the speed of light ($c$) to unity is used.
 See Figure~\ref{fig:feynman_diagram_VHqqbb} for a tree-level Feynman diagram illustrating the basic production/decay of the signal model under consideration.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.65\textwidth,origin=c]{VH____qqbb_Feynman_Diagram}
+	\caption{
+	Feynman diagram illustrating the $pp \rightarrow V^\prime \rightarrow VH$ production/decay chain searched for by this analysis.
+	The initial state quarks originate from the two protons involved in the hard scatter event.
+	}
+	\label{fig:feynman_diagram_VHqqbb}
+\end{figure}
 
 The $V$ and $H$ bosons that are produced in the decay of such theoretical heavy resonances are highly boosted and the resulting decay products of each boson are likely to be collimated and merged into a single large radius jet.
 The dijet invariant mass ($m_{JJ}$) spectrum of the two large radius jets is then used as the discriminant variable, where the signature of the new heavy resonance decay yields a resonant peak structure on top of the smoothly falling background.
@@ -28,40 +38,29 @@ The couplings of the new vector bosons $W^{\prime \pm}$, $Z'$ to the $H$ and $V$
 In Model A, the branching fractions to fermions and gauge bosons are comparable, whereas in Model B the fermionic couplings are suppressed.
 
 A search for heavy vector resonances decaying to $VH$ in the fully hadronic final state was previously performed in ATLAS using $36.1\pm1.0\text{~fb}^{-1}$ of $pp$ collision data at 13 TeV taken during 2015 and 2016 \cite{Aaboud:2017ahz}.
-The largest excess was observed in the $ZH$ channel at $m_{JJ}\sim3.0$~TeV with a local significance of 3.3~$\sigma$, with a  global significance of  2.2~$\sigma$.
+The largest excess was observed in the $ZH$ channel at $m_{JJ}\sim3.0$~TeV with a local significance of 3.3~$\sigma$, and a  global significance of  2.2~$\sigma$.
 Upper limits on the production cross-section times branching ratio to the $q\bar{q}^{(\prime)}b\bar{b}$ final state were set for resonance masses in the range between 1000 and 3800 GeV with values ranging between 107 to 3 fb and 97 to 2 fb (at 95\% CL) for $WH$ and $ZH$ resonances, respectively.
 The corresponding excluded HVT Model B signal mass ranges are 1000-2500 GeV for $WH$ resonances, and 1000 - 2600 GeV for $ZH$ resonances.
 
 Searches for heavy vector resonances decaying to $VH$ in the $V$ boson leptonic decay channels have been performed in ATLAS using $36.1\pm1.0\text{~fb}^{-1}$ of $pp$ collision data at 13 TeV \cite{EXOT-2016-10}.
 For HVT Model A $W'$ ($Z'$) masses have been excluded up to 2.67 TeV (2.65 TeV), while for Model B, $W'$ ($Z'$) masses of up to 2.86 TeV (2.83 TeV) have been excluded.
 
-The CMS collaboration has published a search for new heavy objects decaying to $VH$ in the fully hadronic mode using $19.7$~fb$^{-1}$ of 8 TeV data from Run 1 of the LHC.
+The CMS collaboration has published a search for new heavy resonances decaying to $VH$ in the fully hadronic mode using $19.7$~fb$^{-1}$ of 8 TeV data from Run 1 of the LHC.
 Resonance masses up to 1.7 TeV were excluded in the combined $W'$ and $Z'$ search (1.1 TeV in \zpzh, 1.5 TeV in \wpwh), using the HVT Model B benchmark \cite{Khachatryan:2015bma}.
 The search was also performed by CMS using $35.9$~fb$^{-1}$ of 13 TeV data from Run 2 of the LHC, excluding $W'$ ($Z'$) bosons with masses up to 3.15 TeV (2.26 TeV, except 1.19-1.21 TeV) in Model B \cite{Sirunyan:2017wto}.
 
 % TODO: adapt this summary to thesis .tex structure
-This chapter is structured as follows: Section \ref{sec:theory_overview} describes the contents and motivation behind the HVT model; Section \ref{sec:analysis_strategy} gives a broad overview of the analysis strategy, concepts and definitions; Section \ref{sec:samples} describes the data and simulated samples used; Section \ref{sec:objects} and \ref{sec:selection} describe the object definitions, event selection criteria and corresponding optimization studies; Section \ref{sec:background} describes the strategy for background estimation; Section \ref{sec:statistics} describes the statistical method used to interpret the results; Section \ref{sec:syst} describes the systematic uncertainties considered in this search.
-The results and conclusions of the search are outlined in Chapter \ref{ch:results}.
-
-\begin{figure}
-	\centering
-	\includegraphics[width=0.65\textwidth,origin=c]{VH____qqbb_Feynman_Diagram}
-	\caption{
-	Feynman diagram illustrating the $pp \rightarrow V^\prime \rightarrow VH$ production/decay chain searched for by this analysis.
-	The initial state quarks originate from the two protons involved in the hard scatter event.
-	}
-	\label{fig:feynman_diagram_VHqqbb}
-\end{figure}
+This chapter is structured as follows: Section \ref{sec:theory_overview} describes the contents and motivation behind the HVT model; Section \ref{sec:samples} describes the data and simulated samples used; Sections \ref{sec:objects} and \ref{sec:selection} describe the object definitions, event selection criteria and corresponding optimization studies; Section \ref{sec:background} describes the strategy for background estimation; Section \ref{sec:statistics} describes the statistical method used to interpret the results; Section \ref{sec:syst} describes the systematic uncertainties considered in this search.
+The results and conclusions of the search are provided in Chapter \ref{ch:results}.
 
 \section{Theoretical Framework/Motivation}
 \label{sec:theory_overview}
 
 In order to search for any BSM signature in a particle collider experiment, a model with explicit predictions is necessary.
-For the particular case of heavy resonance searches, many separate models have been developed such as TODO. % cite/explain a few
 No particular model has emerged as the most compelling or well-motivated possibility to single out for search efforts, but producing explicit results\footnote{A \textit{result} here consists of a set of experimentally-derived statistical constraints on model parameters related to the heavy resonance.} for each model would be prohibitively difficult and time consuming for HEP researchers.
-However, the case of a heavy resonance search simplifies the matter because it is not sensitive to all the specific details and free parameters of any underlying model, but only the restricted set of parameters which control the mass of the reosnance and any interactions involved in its production and decay.
+However, the case of a heavy resonance search simplifies the matter because it is not sensitive to all the specific details and free parameters of any underlying model, but only the restricted set of parameters which control the mass of the resonance and any interactions involved in its production and decay.
 
-For this reason a so-called \textit{bridge model} has been developed called the Heavy Vector Triplet (HVT) \cite{Pappadopulo:2014qza}.
+For this reason a so-called \textit{bridge model} has been developed called the Heavy Vector Triplet (HVT) model \cite{Pappadopulo:2014qza}.
 It employs a simplified model of the resonance where only the mass parameters and relevant couplings to SM particles are retained.
 Aside from known SM symmetry constraints this simplified Lagrangian model does not need to fulfill any particular theoretical requirements.
 With this simplified model, experimental results can be presented only in terms of the parameter space of this simplified Lagrangian.
@@ -84,20 +83,13 @@ Once the experimental constraints on $\vec{c}$ are known they can be translated 
 
 Due to its nature as a simplified model rather than a complete description of Nature, some care must be taken to ensure the HVT model is not applied outside the realm of its validity.
 Most importantly the HVT model is constructed to only describe \textit{on-shell} resonance production and decay.
-%TODO: define on/off-shell
 Thus a corresponding experimental search should only be sensitive to the on-shell process and insensitive to any off-shell effects.
-This is achieved by TODO.
 
 The HVT model Lagrangian is constructed beginning with the SM Lagrangian and incorporating a real vector $V_\mu^a$, $a=1,2,3$, in the adjoint representation of $SU(2)_L$ with vanishing hypercharge.
-%TODO: reference electroweak section of theory chapter and add some brief explanation
-These new additions describe one charged ($V^\pm$) and one neutral ($V_\mu^0$) heavy spin-one particle with the charge eigenstate fields defined by the following relations
+These new additions describe two charged ($V_\mu^\pm$) and one neutral ($V_\mu^0$) heavy spin-one particles with the charge eigenstate fields defined by the following relations
 \begin{equation}
-V_\mu^\pm = \frac{V_\mu^1 \mp iV_\mu^2}{\sqrt{2}},\ \ \ V_\mu^0 = V_\mu^3
+V_\mu^\pm = \frac{V_\mu^1 \mp iV_\mu^2}{\sqrt{2}},\ \ \ V_\mu^0 = V_\mu^3.
 \end{equation}
-which are, not by coincidence, very similar to the electroweak TODO.
-%TODO: include mention of Z' and W' labels
-%TODO: paragraph explain choice of fully hadronic final state, maybe citing ATLAS/CMS results for other final states, and citing tables/figures about V/H branching ratios below
-%TODO: discuss large background yield and corresponding very high bkg rejection of jet-tagging techniques
 
 \begin{table}[!htb]
 \begin{center}
@@ -155,26 +147,26 @@ Z Boson properties computed from global averages of experimental results by the 
 	\label{fig:h_branching_ratios}
 \end{figure}
 
-\begin{figure}
-	\centering
-	\includegraphics[width=0.85\textwidth,origin=c]{h_boson_mass_measurement_LHC}
-	\caption{
-	Summary of the ATLAS and CMS $H^0$ mass measurements in the $\gamma\gamma$ and $ZZ \rightarrow 4 \mathrm{lepton}$ channels for Run-1 and Run-2.
-	\cite{Aad:2015zhl, Aaboud:2018wps, Sirunyan:2017exp}
-	}
-	\label{fig:h_mass_measurement}
-\end{figure}
+% \begin{figure}
+% 	\centering
+% 	\includegraphics[width=0.85\textwidth,origin=c]{h_boson_mass_measurement_LHC}
+% 	\caption{
+% 	Summary of the ATLAS and CMS $H^0$ mass measurements in the $\gamma\gamma$ and $ZZ \rightarrow 4 \mathrm{lepton}$ channels for Run-1 and Run-2.
+% 	\cite{Aad:2015zhl, Aaboud:2018wps, Sirunyan:2017exp}
+% 	}
+% 	\label{fig:h_mass_measurement}
+% \end{figure}
 
-\section{Data and Simulated Samples}
+\section{Data and Monte Carlo Simulation}
 \label{sec:samples}
 
-% Feynman Diagrams: https://www-d0.fnal.gov/Run2Physics/top/top_public_web_pages/top_feynman_diagrams.html
+% Possible Feynman Diagrams: https://www-d0.fnal.gov/Run2Physics/top/top_public_web_pages/top_feynman_diagrams.html
 
 \subsection{Signal}
-The Heavy Vector Triplet (HVT) Model A with $g_{V}=1$ samples are used as a benchmark model to set limits in this analysis.
-Under the assumption that there are no differences between Model A and Model B in terms of the relevant kinematics of the event, the results interpreted with the Model A samples can be directly translated to Model B by scaling the relevant branching ratios.
-The MC samples are generated with \MADGRAPH5\_aMC@NLO 2.2.2 \cite{Alwall:2014hca} interfaced to \PYTHIA8.186 \cite{Sjostrand:2007gs} for shower and hadronization, with the NNPDF23 PDF set \cite{Ball:2011mu} and the ATLAS A14 tune \cite{ATL-PHYS-PUB-2014-021}. Tables \ref{tab:hvta_wh} and \ref{tab:hvta_zh} show the cross-sections and sample information for the HVT Model A samples, generated at different mass points in the range of 1 to 5 TeV.
-Only \Hbb and $H\rightarrow c\bar{c}$ decays are included for the Higgs boson, corresponding to a branching ratio of 0.569 + 0.0287.
+The Heavy Vector Triplet (HVT) Model A with $g_{V}=1$ samples are used as a benchmark model to interpret the results of this analysis.
+Under the assumption that there are no differences\footnote{The width of the HVT resonance is dominated entirely by experimental resolution} between Model A and Model B in terms of the relevant kinematics of the event, the results interpreted with the Model A samples can be directly translated to Model B by scaling the relevant branching fraction and cross section values.
+The MC samples are generated at leading order in $\alpha_S$ with \MADGRAPH5\_aMC@NLO 2.2.2 \cite{Alwall:2014hca} interfaced to \PYTHIA8.186 \cite{Sjostrand:2007gs} for parton shower and hadronization, with the NNPDF23 PDF set \cite{Ball:2011mu} and the ATLAS A14 tune \cite{ATL-PHYS-PUB-2014-021}. Tables \ref{tab:hvta_wh} and \ref{tab:hvta_zh} show the cross-sections and sample information for the HVT Model A samples, generated at different mass points in the range of 1 to 5 TeV.
+Only \Hbb and $H\rightarrow c\bar{c}$ decays are included for the Higgs boson, corresponding to a branching ratio of 0.569 + 0.0287 \cite{Aad:2015gba}.
 Tables~\ref{tab:hvta_wh} and ~\ref{tab:hvta_zh} summarize the properties of the HVT Model A signal samples generated and used for this analysis, while Tables~\ref{tab:hvtb_wh} and ~\ref{tab:hvtb_zh} describe HVT Model B.
 
 \begin{table}[!htb]
@@ -402,22 +394,26 @@ DSID & Process & Generator & $\sigma$ [fb] & $k$-factor & $\epsilon_{\text{filte
 \end{table}
 
 \subsection{Data}
-
-%TODO: explain what a GRL is
-This search is performed with \lumi of $\sqrt{s} = 13$~TeV data collected by the ATLAS experiment in 2015, 2016, 2017, and 2018 LHC $pp$ runs, in the 25 ns running configuration.
+\label{subsec:data}
+This search is performed with \lumi\ of $\sqrt{s} = 13$~TeV data collected by the ATLAS experiment in 2015, 2016, 2017, and 2018 LHC $pp$ runs, in the 25 ns running configuration.
 Only data selected in the ATLAS good runs lists (GRL) below are used, ensuring that all the relevant elements of the ATLAS detector were fully operational and efficient while the data were collected.
 \begin{itemize}
+    \tiny
     \itemsep -1em 
     \item \path{data15_13TeV.periodAllYear_DetStatus-v105-pro22-13_Unknown_PHYS_StandardGRL_All_Good_25ns.xml}
     \item \path{data16_13TeV.periodAllYear_DetStatus-v105-pro22-13_Unknown_PHYS_StandardGRL_All_Good_25ns_WITH_IGNORES.xml}
     \item \path{data17_13TeV.periodAllYear_DetStatus-v105-pro22-13_Unknown_PHYS_StandardGRL_All_Good_25ns_Triggerno17e33prim.xml}
     \item \path{data18_13TeV.periodAllYear_DetStatus-v105-pro22-13_Unknown_PHYS_StandardGRL_All_Good_25ns_Triggerno17e33prim.xml}
+    \normalsize
 \end{itemize}
 Additional quality requirements are applied, as recommended by the ATLAS Data Preparation group. These include the rejection of incomplete events, as well as events with LAr noise bursts and LAr or Tile data corruption.
 
 The integrated luminosity of the runs is estimated following the methodology described in \cite{Aad:2013ucp}.
 This corresponds to an integrated luminosity of $3.2\invfb$ in 2015, $33.0\invfb$ in 2016, $44.3\invfb$ in 2017, and $58.5\invfb$ in 2018.
 The mean number of $pp$ interactions per crossing was not constant for Run-2 and is shown for each data period in Figure~\ref{fig:mu_per_year}.
+The mean number of interactions per crossing corresponds to the mean of the poisson distribution of the number of interactions per crossing calculated for each bunch.
+It is calculated from the instantaneous per bunch luminosity as $\mu = L_{\mathrm{bunch}} × \sigma_{\mathrm{inel}} / f_r$ where $L_{\mathrm{bunch}}$ is the mean per bunch instantaneous luminosity, $\sigma_{\mathrm{inel}}$ is the inelastic cross section which we take to be 80 mb for 13 TeV collisions, and $f_r$ is the LHC revolution frequency.
+The luminosity shown represents the initial 13 TeV luminosity estimate and includes all 13 TeV pp data recorded up to 2018.
 
 \begin{figure}[htbp!]
 \begin{center}
@@ -425,21 +421,18 @@ The mean number of $pp$ interactions per crossing was not constant for Run-2 and
 \end{center}
 \caption{
 Shown is the luminosity-weighted distribution of the mean number of interactions per crossing for the 2015-2018 pp collision data at 13 TeV centre-of-mass energy.
-All data recorded by ATLAS during stable beams is shown, and the integrated luminosity and the mean mu value are given in the figure.
-The mean number of interactions per crossing corresponds to the mean of the poisson distribution of the number of interactions per crossing calculated for each bunch.
-It is calculated from the instantaneous per bunch luminosity as $\mu = L_{\mathrm{bunch}} × \sigma_{\mathrm{inel}} / f_r$ where $L_{\mathrm{bunch}}$ is the mean per bunch instantaneous luminosity, $\sigma_{\mathrm{inel}}$ is the inelastic cross section which we take to be 80 mb for 13 TeV collisions, and $f_r$ is the LHC revolution frequency.
-The luminosity shown represents the initial 13 TeV luminosity estimate and includes all 13 TeV pp data recorded up to 2018.
+All data recorded by ATLAS during stable beams is shown, and the integrated luminosity and the mean mu value are given in the figure. © 2019 CERN
 }
 \label{fig:mu_per_year}
 \end{figure}
 
 \subsection{Backgrounds}
 The dominant contribution to the background in this search originates from dijet QCD processes and contributes approximately 92-98\% of the total background yield depending on the region under consideration, as shown in Table~\ref{tab:bkg_comp}.
-QCD MC samples do not have enough statistics in the high mass region to model this process in the regions of interest, especially given the high background rejection that is achieved with the $V$ and $H$ tagging techniques.
-Therefore, the dijet background is estimated from data, in order to avoid problems associated with theoretical mismodellings and low statistics.
+QCD MC samples do not have enough enough events in the high mass region to model this process in the regions of interest, especially given the high background rejection that is achieved with the $V$ and $H$ tagging techniques.
+Therefore, the multijet background is estimated from data, in order to avoid problems associated with theoretical mismodelling and low statistics.
 
 Other contributions to the background composition come primarily from \tt and $V$+jets, totaling from 2 to 10\% of the background, depending on the region.
-Since the background prediction is fully data-driven, these MC samples are only used for a limited set of studies such as TODO.
+Since the background prediction is fully data-driven, these MC samples are only used for a limited set of studies.
 Standard Model VV, VH and $H \rightarrow gg$ contributions are considered negligible.
 
 \subsubsection{QCD}
@@ -477,23 +470,22 @@ DSID & Process & Generator & $\sigma\times\text{BR}$ [fb] & $k$-factor & $\epsil
 \end{center}
 \end{scriptsize}
 \end{table}
-\dots
 
 \subsubsection{$V$+jets}
-The $W$+jets and $Z$+jets events are generated with \SHERPA 2.1 \cite{Gleisberg:2008ta} interfaced with the CT10 PDF set. Matrix elements of up to 4 extra partons are calculated at leading order in QCD. Only the hadronic decays of the $W$ and $Z$ are included. The samples are split by boson \pt, as listed in Table \ref{tab:vjets}.
+The $W$+jets and $Z$+jets events are generated with \SHERPA 2.1.1 \cite{Gleisberg:2008ta} interfaced with the CT10 PDF set \cite{Gao:2013xoa}. Matrix elements of up to 4 extra partons are calculated at next-to-leading order in $\alpha_S$. Only the hadronic decays of the $W$ and $Z$ are included. The samples are split by boson \pt, as listed in Table \ref{tab:vjets}.
 
 % Updated June 2019
 \begin{table}[!htb]
-\begin{small}
+\begin{scriptsize}
 \begin{center}
 \begin{tabular}{|c|l|c|c|c|c|r|}
     \hline
     DSID & Process & Generator & $\sigma\times\text{BR}$ [fb] & $k$-factor & $\epsilon_{\text{filter}}$ & Events \\ \hline
-    304307 & \makecell{$W \rightarrow q q^\prime$ + 0,1,2,3,4 partons \\ $280 < p_{T}^{W} < 500$~GeV} & \SHERPA v2.1.1 & 2.949e+04 & 1.0 & 1.0 & 490000 \\
+    304307 & \makecell{$W \rightarrow q \bar{q}^\prime$ + 0,1,2,3,4 partons \\ $280 < p_{T}^{W} < 500$~GeV} & \SHERPA v2.1.1 & 2.949e+04 & 1.0 & 1.0 & 490000 \\
     \hline
-    304308 & \makecell{$W \rightarrow q q^\prime$ + 0,1,2,3,4 partons \\ $500 < p_{T}^{W} < 1000$~GeV} & \SHERPA v2.1.1 & 2.164e+03 & 1.0 & 1.0 & 170000 \\
+    304308 & \makecell{$W \rightarrow q \bar{q}^\prime$ + 0,1,2,3,4 partons \\ $500 < p_{T}^{W} < 1000$~GeV} & \SHERPA v2.1.1 & 2.164e+03 & 1.0 & 1.0 & 170000 \\
     \hline
-    304309 & \makecell{$W \rightarrow q q^\prime$ + 0,1,2,3,4 partons \\ $p_{T}^{W} > 1000$~GeV}       & \SHERPA v2.1.1 & 4.609e+01 & 1.0 & 1.0 & 115000 \\
+    304309 & \makecell{$W \rightarrow q \bar{q}^\prime$ + 0,1,2,3,4 partons \\ $p_{T}^{W} > 1000$~GeV}       & \SHERPA v2.1.1 & 4.609e+01 & 1.0 & 1.0 & 115000 \\
     \hline
     304707 & \makecell{$Z \rightarrow q \bar{q}$ + 0,1,2,3,4 partons \\ $280 < p_{T}^{Z} < 500$~GeV}  & \SHERPA v2.1.1 & 1.262e+04 & 1.0 & 1.0 & 250000 \\
     \hline
@@ -508,19 +500,19 @@ The $W$+jets and $Z$+jets events are generated with \SHERPA 2.1 \cite{Gleisberg:
 }
 \label{tab:vjets}
 \end{center}
-\end{small}
+\end{scriptsize}
 \end{table}
 
 \subsubsection{t$\bar{t}$}
 %TODO: tree level feynman diagrams
 
-The \tt samples are generated with \textsc{Powheg-Box} v2 \cite{Frixione:2002ik} with the NNPDF30 PDF, interfaced with \PYTHIA 8 with NNPDF23 PDF and \textsc{A 14} tune for parton shower.
+The \tt samples are generated with \textsc{Powheg-Box} v2 \cite{Frixione:2002ik} with the NNPDF30 PDF, interfaced with \PYTHIA 8 with NNPDF23 PDF and \textsc{A14} tune for parton shower.
 \textsc{EvtGen} v1.2.0 \cite{Lange:2001uf} is used for properties of bottom and charm hadron decays. In order to keep statistical fluctuations small across the dijet mass spectrum, additional \tt samples are used which are generated in slices of \tt invariant mass, starting from 1.1 TeV. Double-counting is avoided by explicitly cutting out events in the inclusive sample that have a \tt mass greater than 1.1 TeV.
 The samples are listed in Tables \ref{tab:tt} and \ref{tab:ttSliced}. The cross-section of the \tt process is normalized to NNLO+NNLL in QCD, as calculated by \textsc{Top++} 2.0 \cite{Czakon:2011xx}. The \POWHEG \textsc{hdamp} parameter \cite{ATL-PHYS-PUB-2014-005} is set to 1.5 times the top mass.
 
 % Updated June 2019
 \begin{table}[!htb]
-\begin{small}
+\begin{scriptsize}
 \begin{center}
 \begin{tabular}{|c|l|c|c|c|c|r|}
     \hline
@@ -528,16 +520,16 @@ The samples are listed in Tables \ref{tab:tt} and \ref{tab:ttSliced}. The cross-
     410471 & all-hadronic \tt & \makecell{\POWHEG + \PYTHIA v8.230 \\ + EvtGen v1.6.0} & 7.298e+05 & 1.0 & 0.45623 & 109738000 \\
     \hline
 \end{tabular}
-\caption{\tt inclusive samples used in the analysis. The dataset ID, MC generator, production cross-sections,
+\caption{The \tt inclusive sample used in the analysis. The dataset ID, MC generator, production cross-sections,
 $k$-factor, filter efficiency and total number of generated events are shown.}
 \label{tab:tt}
 \end{center}
-\end{small}
+\end{scriptsize}
 \end{table}
 
 % Updated June 2019
 \begin{table}[!htb]
-\begin{small}
+\begin{scriptsize}
 \begin{center}
 \begin{tabular}{|c|l|c|c|c|c|r|}
 \hline
@@ -557,7 +549,7 @@ DSID & Process & Generator & $\sigma\times\text{BR}$ [fb] & $k$-factor & $\epsil
 $k$-factor, filter efficiency and total number of generated events are shown.}
 \label{tab:ttSliced}
 \end{center}
-\end{small}
+\end{scriptsize}
 \end{table}
 
 \section{Object Selection}
@@ -568,8 +560,8 @@ $k$-factor, filter efficiency and total number of generated events are shown.}
 \label{sec:tccjets}
 In order to identify and reconstruct potential vector boson and Higgs boson candidates, large radius parameter ("large-$R$") jets are used.
 In prior years the de facto jet algorithm in this circumstance was the \akt algorithm with a radius parameter of $R=1.0$ utilizing locally weighted topological cell clusters (LCTopo)~\cite{PERF-2014-07} for constituents.
-A new jet type of jet constituent known as as Track-CaloCluster (TCC) has been developed \cite{ATL-PHYS-PUB-2017-015} which combines calorimeter and tracking data in such a way to leverage the most performant aspects of both.
-In practice TCC jets exploit the superior spatial resolution of the tracker and the energy measurement of the calorimeter, respectively.
+A new jet type of jet constituent known as Track-CaloCluster (TCC) has been developed \cite{ATL-PHYS-PUB-2017-015} which combines calorimeter and tracking data in such a way as to leverage the most performant aspects of both.
+In practice TCC jets exploit the superior spatial resolution of the tracker and the energy measurement of the calorimeter.
 This approach is particularly beneficial for recovering angular information from highly boosted jet constituents that would otherwise merge and be lost due to the resolution limitations when using the calorimeter alone.
 A comparison of jet mass and \d2 resolution is shown in Figure ~\ref{fig:tcc_lctopo_res}.
 For these reasons TCC jets are used in this analysis rather than LCTopo.
@@ -582,7 +574,7 @@ A Monte Carlo based particle-level calibration is applied to the jets used in th
 \begin{center}
 \includegraphics[width=\textwidth]{TCC_LCTopo_Mass_D2_resolution.png}
 \end{center}
-\caption{A comparison of the fractional jet (a) mass and (b) \d2 resolution for LCTopo (solid black lines) and TCC (dashed red lines) as a function of truth jet \pt.}
+\caption{A comparison of the fractional jet (a) mass and (b) \d2 resolution for LCTopo (solid black lines) and TCC (dashed red lines) as a function of truth jet \pt. © CERN}
 \label{fig:tcc_lctopo_res}
 \end{figure}
 
@@ -619,24 +611,24 @@ $\left| \eta \right|$ Cut & $< 2.0$ \\
 %TODO: Explain VR jet algorithm in jets chapter and reference here
 %TODO: Make picking out b-quarks from Higgs decay the obvious purpose of these jets
 Track-jets are built by clustering Inner Detector tracks using the \akt algorithm.
-All tracks used are required to be associated with the primary vertex of the event, defined as the vertex with the with largest $\sum p_T^2$.
-The selected tracks are required to have $p_T$ greater than 500 MeV and pass a loose set of cuts, as listed in Section TODO.
+All tracks used are required to be associated with the primary vertex of the event, defined as the vertex with the largest $\sum p_T^2$.
+The selected tracks are required to have $p_T$ greater than 500 MeV and pass the ``Loose'' tracking quality cuts.
 In this analysis the variable-radius track jet collection is used, where the radius parameter is a function of the jet $p_{T}$ as $R=\rho/p_{T}$.
 The parameter $\rho$ is set to 30 GeV, and the minimum and maximum values for the radius are set to 0.02 and 0.4, respectively \cite{ATL-PHYS-PUB-2017-010}.
 
 When compared to calorimeter jets, the smaller $R$ parameters in track-jets coupled with the fact that tracks have better angular resolution than calorimeter clusters, mean that the decay products of highly boosted heavy objects can still be resolved.
-After clustering, track-jets are then associated to the large-R calorimeter jets via ghost-association \cite{Cacciari:2008gn}.
+After clustering, track-jets are then associated to the large-R calorimeter jets via ghost-association \cite{Cacciari:2008gn}, a procedure that treats them as four-vectors of infinitesimal magnitude during the jet reconstruction and assigns them to the jet with which they are clustered.
 
-A $b$-tagging algorithm is used to identify track-jets which are likely to contain $B$-hadrons from the Higgs boson decay. The MV2 algorithms exploit the relatively long lifetime of $B$-hadrons with respect to lighter hadrons, as well as the kinematics of the charged particle tracks.
+A $b$-tagging algorithm is used to identify track-jets which are likely to contain $b$-hadrons from the Higgs boson decay. The MV2 algorithms exploit the relatively long lifetime and large mass of $b$-hadrons with respect to lighter hadrons, as well as the kinematics of the charged particle tracks.
 
-Optimization studies were performed in order to determine the best b-tagging algorithm and working point for this search.
+Optimization studies were performed in order to determine the best $b$-tagging algorithm and working point for this search.
 The MV2c10 algorithm is used with the 77\% fixed efficiency working point, as measured from $b$ jets in \tt events, which corresponds to a background rejection of 1/5 for $c$ jets and 1/112 for light jets.
 
 \subsection{Leptons}
 \label{sec:leptons}
 % Explain purpose of lepton veto
-Based on the lepton veto applied in the ATLAS $Z' \rightarrow ZH\rightarrow \nu\nu b\bar{b}$ analysis, events with at least one loose lepton are rejected.
-Loose muons are required to have $p_{T}>7$~GeV and fall in the central region of the detector ($|\eta|<2.5$). They are identified with the "loose" quality working point as defined in Section TODO. Track quality requirements are applied such that $|d_{0}/\sigma(d_{0})|<3$ and $|z_{0}\sin\theta|<0.5$~mm, where $d_{0}$ and $z_{0}$ are the transverse and longitudinal track impact parameters with respect to the beam line. Loose electrons are also required to have $p_{T}>7$~GeV, with a pseudo-rapidity requirement such that $|\eta|<2.47$. As with muons, requirements on the transverse and longitudinal impact parameters of the associated tracks are made. In terms of isolation, both loose electrons and loose muons are required to be "LooseTrackOnly", where a cone with radius $r(p_{T}^{\ell})=\min(0.2,10~\text{GeV}/p_{T}^{\ell})$ (0.3 for muons) is constructed around each lepton and for which the $p_{T}$-sum of all tracks with $p_{T}>500$~MeV defines the isolation $I_\ell$. A cut on $I_\ell/p_{T}^{\ell}<I_{0}$ is imposed, and $I_{0}$ is such that a flat efficiency of 99\% as a function of $p_{T}$ and $\eta$ is obtained for lepton candidates in $Z\rightarrow \ell \ell$ events.
+Based on the lepton veto applied in the ATLAS $Z' \rightarrow ZH\rightarrow \nu\bar{\nu} b\bar{b}$ analysis, events with at least one loose lepton are rejected.
+Loose muons are required to have $p_{T}>7$~GeV and fall in the central region of the detector ($|\eta|<2.5$). They are identified with the "loose" quality working point. Track quality requirements are applied such that $|d_{0}/\sigma(d_{0})|<3$ and $|z_{0}\sin\theta|<0.5$~mm, where $d_{0}$ and $z_{0}$ are the transverse and longitudinal track impact parameters. Loose electrons are also required to have $p_{T}>7$~GeV, with a pseudorapidity requirement such that $|\eta|<2.47$. As with muons, requirements on the transverse and longitudinal impact parameters of the associated tracks are made. In terms of isolation, both loose electrons and loose muons are required to be "LooseTrackOnly", where a cone with radius $r(p_{T}^{\ell})=\min(0.2,10~\text{GeV}/p_{T}^{\ell})$ (0.3 for muons) is constructed around each lepton and for which the $p_{T}$-sum of all tracks with $p_{T}>500$~MeV defines the isolation $I_\ell$. A cut on $I_\ell/p_{T}^{\ell}<I_{0}$ is imposed, and $I_{0}$ is such that a flat efficiency of 99\% as a function of $p_{T}$ and $\eta$ is obtained for lepton candidates in $Z\rightarrow \ell \ell$ events.
 
 \section{Event Selection}
 \label{sec:selection}
@@ -644,7 +636,60 @@ Loose muons are required to have $p_{T}>7$~GeV and fall in the central region of
 \subsection{Pre-Selection}
 \label{subsec:presel}
 
+\subsubsection{EXOT3 Derivation: xAOD $\rightarrow$ DxAOD}
+\label{subsec:exot3}
+
+All data and MC samples are initially produced in xAOD format.
+In order to reduce the file size of these samples, the derivation framework is used to remove both objects and entire events of no interest to the analysis.
+The EXOT3 derivation is used\footnote{\path{https://gitlab.cern.ch/atlas/athena/blob/21.2/PhysicsAnalysis/DerivationFramework/DerivationFrameworkExotics/share/EXOT3.py}}.
+Beyond reducing file size, the derivation is also responsible for the production of nonstandard jet collections, such as the fat jet collections needed for this analysis.
+
+A \textit{slimming} procedure is applied in order to remove all but the essential variables for calibration of the following objects:
+\begin{itemize}
+    \item \path{Electrons}
+    \item \path{Muons}
+    \item \path{MET_Reference_AntiKt4LCTopo}
+    \item \path{InDetTrackParticles}
+    \item \path{PrimaryVertices}
+    \item \path{AntiKt4EMTopoJets}
+\end{itemize}
+
+A \textit{thinning} procedure is applied in order to remove some objects based on the following criteria:
+
+\begin{itemize}
+    \item \path{InDetTrackParticles}: must be associated with
+    \begin{itemize}
+        \item An electron
+        \item A muon
+        \item An AntiKt10LCTopoJet with \pt > 150 GeV and $|\eta| < 2.8$.
+        \item An AntiKt10TrackCaloCluster jet
+    \end{itemize}
+    \item \path{LCOriginTopoClusters}: must be associated with
+    \begin{itemize}
+        \item An AntiKt10LCTopoJet with \pt > 150 GeV and $|\eta| < 2.8$.
+        \item An AntiKt10TrackCaloCluster jet
+    \end{itemize}
+\end{itemize}
+
+A \textit{skimming} procedure is also applied to remove entire events from the xAOD with the following criteria:
+\begin{itemize}
+
+    \item Topological large-R jet selection
+        \begin{itemize}
+            \item >2 calibrated offline AntiKt10LCTopoTrimmedPtFrac5SmallR20Jets jets with
+                \begin{itemize}
+                    \item \pt\ > 100 GeV
+                    \item $|\eta|$ < 2.8
+                    \item $m > 30$ GeV for jets with $\pt < 1.0\ TeV$
+                \end{itemize}
+        \end{itemize}
+    \item Events must be required to pass one of a long list of jet-related ATLAS triggers.
+\end{itemize}
+
+In total the combined EXOT3 skimming, thinning, and slimming reduces the file size to ~2\% of the original size for data.
+
 \subsubsection{Event Cleaning}
+\label{subsec:evtclean}
 %TODO: add footnotes explaining beam halo and cosmic rays
 %TODO: mention percent of events removed by event cleaning
 Non-collision backgrounds originating from calorimeter noise, beam halo interactions or cosmic rays can lead to spurious calorimeter signals and the reconstruction of "bad" jets. This effect can be suppressed by applying a standard jet cleaning procedure, which has been developed for 2015 data to reject jets based on their shape and timing information \cite{jetSelection} . Events are rejected if they contain at least one small radius jet (anti-$k_T$, with $R=0.4$) classified as ``bad-loose'' by the aforementioned jet cleaning criteria.
@@ -656,8 +701,8 @@ This overlap condition can be expressed with the following inequality:
 \begin{equation}
     \Delta R(i,j) < \min(R_i, R_j)
 \end{equation}
-Any VR track jets matching this criteria are removed from consideration.
-This prevents the utilization of track jets with an ambigious association of tracks for $b$-tagging, because in these cases it is likely that the $b$-tagging calibration scale factors are not correct.
+Any VR track jets matching this criterion are removed from consideration.
+This prevents the utilization of track jets with an ambiguous association of tracks for $b$-tagging, because in these cases it is likely that the $b$-tagging calibration scale factors are not correct.
 See Figure~\ref{fig:vr_contain} for an illustration of this phenomenon.
 
 \begin{figure}[htbp!]
@@ -665,8 +710,8 @@ See Figure~\ref{fig:vr_contain} for an illustration of this phenomenon.
         \subfloat[]{\includegraphics[width=.75\linewidth]{vr_containment_good.png}}\\
         \subfloat[]{\includegraphics[width=.75\linewidth]{vr_containment_bad.png}}
     \end{center}
-    \caption{ $\eta-\phi$ distribution (from simulation) of constituents of the two leading \pt VR track jets ghost associated to a truth large-R Higgs jet.
-        Two illustrative cases are shown: (a) clean separation of track jet constituents and (b) pathogical overlap.
+    \caption{ $\eta-\phi$ distribution (from simulation) of constituents of the two leading \pt\ VR track jets ghost associated to a truth large-R Higgs jet.
+        Two illustrative cases are shown: (a) clean separation of track jet constituents and (b) pathological overlap.
         The radii of the filled red/blue circles are proportional to $\log{\pt}$ of the corresponding track jet constituent.
     }
     \label{fig:vr_contain}
@@ -678,11 +723,9 @@ See Figure~\ref{fig:vr_contain} for an illustration of this phenomenon.
 %2016: HLT_j420_a10r_L1J100
 %2017/2018: HLT_j460_a10t_lcw_jes_L1J100
 
-%TODO: reference trigger section
-%TODO: explain pre-scaling in trigger section
 For the analysis of the 2015 dataset, a high $p_T$, unprescaled large-$R$ jet trigger is used to trigger events: HLT\_j360\_a10\_lcw\_sub\_L1J100. During the 2016 data taking, given the increase in instantaneous luminosity, the trigger with a higher threshold is used: HLT\_j420\_a10r\_L1J100. For the 2017 and 2018 datasets an even higher threshold is used: HLT\_j460\_a10t\_lcw\_jes\_L1J100. The 2015/2016 triggers listed above fire on the untrimmed jet $p_T$, while the 2017/2018 trigger fires on the trimmed jet $p_T$ and applies a subsequent jet energy scale calibration.
 
-For all datasets the offline selection is chosen to produce nearly 100\% efficiency. No trigger-related scale factors are needed in MC to match the efficiency obtained in data.
+For all datasets the offline selection is chosen to produce nearly 100\% efficiency. No trigger-related scale factors are needed in MC simulation to match the efficiency obtained in data.
 The efficiency of the relevant triggers as a function of leading large-R jet $\pt$ are shown in Figure~\ref{fig:trigeffturnon}.
 
 \begin{figure}[htbp!]
@@ -693,18 +736,19 @@ The efficiency of the relevant triggers as a function of leading large-R jet $\p
 \caption{
     The efficiency of a range of HLT large-R jet triggers as a function of the leading large-R jet $p_T$ (left) and dijet mass (right).
     The dijet mass (right) plot is produced after applying a flat leading jet $p_T$ cut of 500 GeV.
+    © CERN
 }
 \label{fig:trigeffturnon}
 \end{figure}
 
 \subsubsection{Jet Selection}
 At least two large-$R$ jets are required to be present in the event which pass the kinematic cuts explained in Section \ref{sec:objects}.
-In order to ensure full trigger efficiency, a cut of 500 GeV is placed on the leading large-R jet $\pt$.
+In order to ensure full trigger efficiency, a cut of 500 GeV is placed on the leading large-R jet $\pt$ along with a cut on the dijet mass (\mjj > 1.3 TeV).
 The two leading jets in the event will correspond to a vector boson and a Higgs boson candidate, the assignment of which is made based on their invariant masses: the heaviest jet is chosen as the Higgs candidate and the lightest as the $W/Z$ candidate.
 %Previous studies of alternative methods of H/V candidate assignment have been performed and are documented in a previous support note for this analysis ~\cite{ATL-COM-PHYS-2016-482}.
 The remaining $H$ or $W/Z$ specific cuts described below apply to each jet according to this assignment.
 Figure \ref{fig:assignment} shows the fraction of events that are correctly matched with this V/H assignment, by checking that the jets chosen for vector and Higgs boson candidates match the truth-level bosons in the signal samples, as a function of the resonance mass.
-The truth matching requirement is defined as $\Delta R < 1.0$ between the untrimmed parent of the reconstructed large radius jet and the truth hadron.
+The truth matching requirement is defined as $\Delta R < 1.0$ between the untrimmed parent of the reconstructed large radius jet and the truth boson.
 
 \begin{figure}[htbp!]
 \begin{center}
@@ -720,7 +764,7 @@ The difference in efficiency for WH vs. ZH final states is due to the closer pro
 \end{figure}
 
 \subsubsection{Dijet Mass}
-The dijet mass of the $VH$ system, labelled \mvh or $m_{\mathrm{VH}}$ in this analysis, is required to be greater than 1.3 TeV in order to ensure full trigger efficiency.
+The dijet mass of the $VH$ system, labelled \mvh\ or $m_{\mathrm{VH}}$ in this analysis, is required to be greater than 1.3 TeV in order to ensure full trigger efficiency.
 A comparison of simulated background and signal distributions for \mvh\ can be found in Figure~\ref{fig:simple_mc_mVH}.
 
 \begin{figure}[htbp!]
@@ -743,11 +787,11 @@ A comparison of simulated background and signal distributions for \dy12\ can be 
 \begin{center}
     \includegraphics[width=0.49\textwidth]{VHqqbb_SimpleSigBkgMC_dyVH.pdf}
 \end{center}
-\caption{Rapidity difference between large-$R$ jets, as measured in signal and background MC samples, normalized to unity. Only pre-selection is applied, as described in Section~\ref{subsec:presel} }
+\caption{Distributions of the rapidity difference between the two leading \pt large-$R$ jets, as measured in signal and background MC samples, normalized to unity. Only pre-selection is applied, as described in Section~\ref{subsec:presel}. }
 \label{fig:simple_mc_rapidity}
 \end{figure}
 
-The cutflow and efficiencies in data for all elements of the pre-selection data can be found in Table ~\ref{tab:data_cutflow}.
+The sequence of cuts applied and their corresponding efficiencies in data for all elements of the pre-selection data can be found in Table ~\ref{tab:data_cutflow}.
 
 \begin{table}[htbp!]
 \normalsize
@@ -785,29 +829,29 @@ Significant discrimination with minimal signal loss can be achieved by selecting
 See Figures \ref{fig:simple_mc_mV} and \ref{fig:simple_mc_mH}.
 
 \paragraph{\d2 (W/Z tagging only)}
-Jets that correspond to a hadronically decaying boson typically exhibit a two-prong structure, while QCD jets tend to exhibit a diffuse or one-prong structure.
+Jets that correspond to a hadronically decaying boson typically exhibit a two-prong structure, while QCD jets tend to exhibit a more diffuse or one-prong structure.
 The \d2 substructure variable used in this search to discriminate such structure is defined as a ratio of so-called \textit{energy correlation functions} \cite{Larkoski:2013eya} built from sums over the large-R jet constituent four-momenta.
 See Figure \ref{fig:simple_mc_d2V}.
-The \d2 variable provides very little additional sensitivity gain for Higgs tagging due to the redundancy with the b-tagging track jet requirements, as shown in Figure~\ref{fig:htag_sens_d2}.
+The \d2 variable provides very little additional sensitivity gain for Higgs tagging due to the redundancy with the $b$-tagging track jet requirements, as shown in Figure~\ref{fig:htag_sens_d2}.
 
 \paragraph{\ntrk}
 %TODO: describe QCD color factors and splitting (use talk you gave to VVJJ years ago)
 Gluon jets make up the majority of the individual large-$R$ jets found in the QCD multijet background.
-These gluon jets tend to have high hadron multiplicity due to the manner in which the QCD color factors influence the showering process.
+These gluon jets tend to have high hadron multiplicity compared to quark jets due to the manner in which the QCD color factors influence the showering process.
 The \ntrk variable provides a proxy measurement for charged hadron multiplicity.
 It is computed from tracks passing the "loose" Inner Detector requirement with \pt > 500 MeV, $|\eta| < 2.5$, and matched to the event primary vertex.
 See Figures \ref{fig:simple_mc_ntrkV} and \ref{fig:simple_mc_ntrkH}.
 
 \paragraph{b-tagging (H only)}
 %TODO: briefly describe ghost-association somewhere
-The B hadrons resulting from the \Hbb decay provide an additional source of discrimination against QCD jets.
-The b-tagging algorithm as described in Section \ref{sec:track_jets} is applied to the two leading \pt\ VR track jets ghost-associated to the Higgs candidate large-R jet.
+The $b$-hadrons resulting from the \Hbb decay provide an additional source of discrimination against QCD jets.
+The $b$-tagging algorithm as described in Section \ref{sec:track_jets} is applied to the two leading \pt\ VR track jets ghost-associated to the Higgs candidate large-R jet.
 
 \begin{figure}[htbp!]
 \begin{center}
     \includegraphics[width=0.49\textwidth]{VHqqbb_SimpleSigBkgMC_mV.pdf}
 \end{center}
-\caption{Vector boson candidate jet mass, as measured in signal and background MC samples, normalized to unity. Only pre-selection is applied, as described in Section~\ref{subsec:presel}}
+\caption{Vector boson candidate jet mass, as measured in signal and background MC samples, normalized to unity. Only pre-selection is applied, as described in Section~\ref{subsec:presel}.}
 \label{fig:simple_mc_mV}
 \end{figure}
 
@@ -815,7 +859,7 @@ The b-tagging algorithm as described in Section \ref{sec:track_jets} is applied 
 \begin{center}
     \includegraphics[width=0.49\textwidth]{VHqqbb_SimpleSigBkgMC_mH.pdf}
 \end{center}
-\caption{Higgs candidate jet mass, as measured in signal and background MC samples, normalized to unity. Only pre-selection is applied, as described in Section~\ref{subsec:presel} }
+\caption{Higgs candidate jet mass, as measured in signal and background MC samples, normalized to unity. Only pre-selection is applied, as described in Section~\ref{subsec:presel}. }
 \label{fig:simple_mc_mH}
 \end{figure}
 
@@ -823,7 +867,7 @@ The b-tagging algorithm as described in Section \ref{sec:track_jets} is applied 
 \begin{center}
     \includegraphics[width=0.49\textwidth]{VHqqbb_SimpleSigBkgMC_d2V.pdf}
 \end{center}
-\caption{Vector boson candidate jet \d2, as measured in signal and background MC samples, normalized to unity. Only pre-selection is applied, as described in Section~\ref{subsec:presel} }
+\caption{Vector boson candidate jet \d2, as measured in signal and background MC samples, normalized to unity. Only pre-selection is applied, as described in Section~\ref{subsec:presel}. }
 \label{fig:simple_mc_d2V}
 \end{figure}
 
@@ -831,7 +875,7 @@ The b-tagging algorithm as described in Section \ref{sec:track_jets} is applied 
 \begin{center}
     \includegraphics[width=0.49\textwidth]{VHqqbb_SimpleSigBkgMC_ntrkVVJJ_V.pdf}
 \end{center}
-\caption{Vector boson candidate jet \ntrk, as measured in signal and background MC samples, normalized to unity. Only pre-selection is applied, as described in Section~\ref{subsec:presel} }
+\caption{Vector boson candidate jet \ntrk, as measured in signal and background MC samples, normalized to unity. Only pre-selection is applied, as described in Section~\ref{subsec:presel}. }
 \label{fig:simple_mc_ntrkV}
 \end{figure}
 
@@ -839,7 +883,7 @@ The b-tagging algorithm as described in Section \ref{sec:track_jets} is applied 
 \begin{center}
     \includegraphics[width=0.49\textwidth]{VHqqbb_SimpleSigBkgMC_ntrkVVJJ_H.pdf}
 \end{center}
-\caption{Higgs candidate jet \ntrk, as measured in signal and background MC samples, normalized to unity. Only pre-selection is applied, as described in Section~\ref{subsec:presel} }
+\caption{Higgs candidate jet \ntrk, as measured in signal and background MC samples, normalized to unity. Only pre-selection is applied, as described in Section~\ref{subsec:presel}. }
 \label{fig:simple_mc_ntrkH}
 \end{figure}
 
@@ -847,7 +891,7 @@ The b-tagging algorithm as described in Section \ref{sec:track_jets} is applied 
 \begin{center}
     \includegraphics[width=0.49\textwidth]{PlotHTagSensitivityWithD2.pdf}
 \end{center}
-\caption{Sensivity of optimized cuts for Higgs tagging. The optimized \d2 cut (violet) is included only for reference and not used in the final analysis due to lack of discrimination power.
+\caption{Sensitivity of optimized cuts for Higgs tagging. The optimized \d2 cut (violet) is included only for reference and not used in the final analysis due to lack of discrimination power.
     The cuts are cumulative, in the order listed in the legend, and the pre-selection described in Section~\ref{subsec:presel} is also applied.
 }
 \label{fig:htag_sens_d2}
@@ -863,8 +907,8 @@ Three separate taggers are derived for W, Z, and Higgs bosons utilizing a maximu
 Smaller values of $a$ are more appropriate for limit-setting, while larger values optimize for maximum discovery potential.
 A middle ground is chosen here and a value of $a = 3$ is used.
 The optimization of all relevant variables is performed simultaneously for $W$, $Z$ and $H$ bosons.
-In the case of the Higgs boson, separate optimization is performed for the case where 1 or 2 subjets pass the $b$-tagging criteria.
-The inputs to the optimization include only a loose pre-selection, without any ~\dy12 or ~\mvh cuts.
+In the case of the Higgs boson, separate optimization is performed for the case where 1 or 2 VR track jets pass the $b$-tagging criteria.
+The inputs to the optimization include only a loose pre-selection, without any ~\dy12 or ~\mvh\ requirements.
 Only signal events with proper V/H truth matching are included in the optimization, thus $\epsilon$ represents the fraction of truth-matched W/Z/H large-$R$ ~jets passing the selection.
 The words 'events' and 'jets' here are interchangeable, due to the fact that there is a maximum of one W or Z or H boson per signal event.
 An example plot of this sensitivity expression for the $[750,950]$ GeV \pt\ bin of the Higgs tagger optimization is shown in Figure~\ref{fig:higgs_opt_sens}.
@@ -873,17 +917,13 @@ An example plot of this sensitivity expression for the $[750,950]$ GeV \pt\ bin 
 For W/Z bosons a three-dimensional tagger is derived utilizing jet mass, \d2, and \ntrk.
 The \d2 and \ntrk cuts are both upper bound cuts, while the jet mass cuts form a two-sided window.
 In the case of Higgs tagging a two-dimensional set of jet mass and \ntrk cuts is derived.
-The \d2 observable was not included in the Higgs optimization due to lack of discriminating power in conjunction with b-tagging.
-For the sake of simplifying eventual combination results, the mass and \d2 cuts for the W/Z bosons derived by the VVJJ group are used.
-Only the W/Z \ntrk cut is unique to this analysis, as it was shown to differ notably from VVJJ.
-The primary reason for this discrepancy is that the V candidate is always the lowest mass of the two leading-\pt\ fat jets in the event, a mass-ordering that is not present for the VVJJ optimization.
+The \d2 observable was not included in the Higgs optimization due to lack of discriminating power in conjunction with $b$-tagging.
 
 Due to the correlation of each optimization variable with large-R jet \pt, each separate tagger is derived as a set of maximum sensitivity cuts in bins of large-R jet \pt.
 After optimization of these cuts, they are smoothed by fitting with the following expression: $\sqrt{\frac{A^2}{(\pt-B)^2} + C^2(\pt-D)^2}$.
 Both terms are first order approximations for different factors impacting the measurement resolution of the jet mass.
 The first term accounts for energy resolution, which worsens at low \pt, and the second for angular resolution, which worsens at high \pt.
 While this expression is physically motivated for the mass cut, it works equally well for the \ntrk cut.
-%Note that a separate exponential function is used by the VVJJ group to fit their \ntrk cuts ~\cite{VVJJSupport2019}.
 
 The optimized Higgs mass and \ntrk cuts are shown in Figure ~\ref{fig:higgs_tagger_cuts}, and the successive efficiency of each cut is shown in Figure ~\ref{fig:higgs_tagger_eff}.
 The optimized W/Z mass and \d2 cuts from VVJJ are shown in Figure ~\ref{fig:vvjj_wz_tagger_mass_d2_cuts}.
@@ -913,7 +953,7 @@ The optimized W/Z \ntrk cuts are shown in Figure ~\ref{fig:wz_tagger_ntrk_cuts}.
     \includegraphics[width=0.49\textwidth]{VHqqbb_HiggsTaggingEff_1tag.pdf}
     \includegraphics[width=0.49\textwidth]{VHqqbb_HiggsTaggingEff_2tag.pdf}
 \end{center}
-\caption{Efficiency times acceptance (relative to pre-selection) for each successive Higgs tagging cut derived via the method described in Section~\ref{subsec:tagger_opt}. Both the 1-tag (left) and 2-tag (right) channels are shown and b-tagging scale factors are applied.}
+\caption{Efficiency times acceptance (relative to pre-selection) for each successive Higgs tagging cut derived via the method described in Section~\ref{subsec:tagger_opt}. Both the 1-tag (left) and 2-tag (right) channels are shown and $b$-tagging scale factors are applied.}
 \label{fig:higgs_tagger_eff}
 \end{figure}
 
@@ -960,7 +1000,6 @@ As measured in data there is 38.3\% SRWH/SRZH overlap in the 1-tag channel, and 
 \label{fig:signalMjj}
 \end{figure}
 
-%TODO: fix references/descriptions
 \begin{table}[htbp!]
 \normalsize
 \centering
@@ -968,7 +1007,7 @@ As measured in data there is 38.3\% SRWH/SRZH overlap in the 1-tag channel, and 
 \hline
 Cut & Description \\
 \hline
-EXOT3& See Section~\ref{subsec:exot3} \\
+EXOT3 & \ref{subsec:exot3} \\
 \hline
 GRL & See Section~\ref{subsec:data} \\
 \hline
@@ -1063,7 +1102,7 @@ Higgs tagging & mass window + \ntrk \\
         $\geq$ 1-tag & 8151 & 88.2 & 10.9\\ \hline
         2-tag & 2807 & 34.4 & 3.7\\ \hline
     \end{tabular}
-    \caption{Cutflow for the 4.0 TeV ZH signal sample.  Where appropriate, $b$-tagging and boson tagging scale factors are included. }
+    \caption{Cutflow for the 4.0 TeV ZH signal sample. }
     \label{tab:zh_4TeV_cutflow}
 \end{table}
 
@@ -1108,16 +1147,16 @@ As a result of these competing factors, multiple background estimation technique
     Events with 0 b-tags are used as a model for the corresponding 1/2-tag selection.
     A control region is used to derive a kinematic re-weighting to facilitate the transformation from the 0-tag events to predictions for the corresponding 1/2-tag region.
     A re-weighting is needed, beyond a simple normalization scale factor, due to the sculpting of the jet \pt\ distribution that occurs after applying b-tagging requirements.
-    The variables used in the re-weighting are all observed relevant to the b-tagging, and they are described in more detail in Section ~\ref{sec:bkg-reweighting}.
-    The quality of this prediction is estimated by by cross-checking the method with a set of validation regions which are orthogonal to the signal regions.
+    The variables used in the re-weighting are those relevant to the b-tagging, and they are described in more detail in Section ~\ref{sec:bkg-reweighting}.
+    The quality of this prediction is estimated by cross-checking the method with a set of validation regions which are orthogonal to the signal regions.
 
 \item \textbf{High Mass SB Based Estimation:}
     Events with a Higgs candidate in the high mass sideband are used as a model for QCD.
     The 0 b-tag events are used for validation and/or to derive a normalization scale factor from the high mass sideband to the SRs.
 
 \item \textbf{Direct Fit based Estimation:}
-    The events in the SR are fit directly with parameterized function.
-    0-tag and high-mass sideband based events are used to validate the method.
+    The events in the SR are fit directly with a parameterized function.
+    The 0-tag and high-mass sideband based events are used to validate the method.
 \end{itemize}
 
 The first approach, extrapolation from 0-tag, has been chosen for this analysis.
@@ -1127,7 +1166,7 @@ The High Mass SB method is strictly worse than the 0-Tag Based Re-Weighting meth
 
 Figure~\ref{fig:bkg_0tag_comp} shows the comparison of normalized shapes for the 0-tag SR\footnote{We use here the term \textit{0-tag SR}, but it is only used to produce the background estimation and is not actually considered in the final statistical analysis with the 1/2-tag SR channels} to the 1-tag SR and the 2-tag SR in MC.
 It is evident in both the 1-tag and 2-tag cases that there are shape differences between 0-tag and 1/2-tag, in particular in the high mass tail.
-This is the primary motivation for the kinematic re-weighting in this analysis, as described in section~\ref{sec:bkg-reweighting}.
+This is the primary motivation for the kinematic re-weighting in this analysis, as described in Section~\ref{sec:bkg-reweighting}.
 
 \subsection{Control/Validation Regions}
 %TODO: make clear the simple idea of control/validation/signal regions
@@ -1156,7 +1195,7 @@ Signal contamination levels in the control and validation regions are small enou
 \begin{center}
     \includegraphics[width=0.49\textwidth]{PlotBtagRej_mH.pdf}
 \end{center}
-\caption{The efficiency of b-tagging selection for QCD MC events as a function of the Higgs candidate Large-R jet mass, starting from the loose pre-selection as described in~\ref{subsec:presel}, both for 1-tag and 2-tag. }
+\caption{The efficiency of 1/2-tag categorization for QCD MC events as a function of the Higgs candidate Large-R jet mass, starting from the loose pre-selection as described in Section~\ref{subsec:presel}, both for 1-tag and 2-tag. }
 \label{fig:bkg_btag_eff}
 \end{figure}
 
@@ -1167,7 +1206,8 @@ The estimated relative contribution of each background from MC is given in Table
 The yields for all signal, control and validations regions for the full Run 2 data set are shown in Table \ref{tab:cr_vr_yield}.
 
 \begin{table}[htbp!]
-\scriptsize
+\begin{tiny}
+\begin{center}
 \begin{tabular}{c|c|c|c}
     Region & Boson Tagger Pass/Fail & Additional Cuts & Comments \\
 \hline
@@ -1187,6 +1227,8 @@ The yields for all signal, control and validations regions for the full Run 2 da
     \makecell{Validation Region \\ (VR2B)} & \makecell{Fail SRWH/SRZH Cuts \\ Pass H \ntrk Cut \\ Fail W and Z \ntrk cuts} & \makecell{$m_H > 70\ GeV$ \\ $m_H < 150\ GeV$ \\ $m_V < 65\ GeV$} & \makecell{Used to validate background estimation \\ and derive associated modeling uncertainties} \\
 \hline
 \end{tabular}
+\end{center}
+\end{tiny}
 \caption{Definition of all signal, control, and validation regions.}
 \label{tab:RegionDefinition}
 \end{table}
@@ -1217,11 +1259,11 @@ VR1A 1-tag & 92.49 $\pm$ 5.06 & 5.49 $\pm$ 0.32 & 2.02 $\pm$ 0.45 \\
 \hline
 VR1A 2-tag & 95.25 $\pm$ 14.05 & 3.11 $\pm$ 0.68 & 1.64 $\pm$ 0.98 \\
 \hline
-VR2A 0-tag & 98.38 $\pm$ 1.16 & 0.04 $\pm$ 0.01 & 1.58 $\pm$ 0.1 \\
+VR2A 0-tag & 98.38 $\pm$ 1.16 & 0.04 $\pm$ 0.01 & 1.58 $\pm$ 0.10 \\
 \hline
 VR2A 1-tag & 98.06 $\pm$ 2.81 & 0.31 $\pm$ 0.04 & 1.63 $\pm$ 0.22 \\
 \hline
-VR2A 2-tag & 97.23 $\pm$ 7.4 & 0.36 $\pm$ 0.11 & 2.41 $\pm$ 0.9 \\
+VR2A 2-tag & 97.23 $\pm$ 7.4 & 0.36 $\pm$ 0.11 & 2.41 $\pm$ 0.90 \\
 \hline
 VR1B 0-tag & 98.49 $\pm$ 0.91 & 0.5 $\pm$ 0.01 & 1.01 $\pm$ 0.06 \\
 \hline
@@ -1229,7 +1271,7 @@ VR1B 1-tag & 95.97 $\pm$ 1.92 & 3.35 $\pm$ 0.09 & 0.69 $\pm$ 0.11 \\
 \hline
 VR1B 2-tag & 95.69 $\pm$ 6.0 & 3.44 $\pm$ 0.29 & 0.87 $\pm$ 0.69 \\
 \hline
-VR2B 0-tag & 98.37 $\pm$ 0.6 & 0.06 $\pm$ 0.0 & 1.57 $\pm$ 0.05 \\
+VR2B 0-tag & 98.37 $\pm$ 0.6 & 0.06 $\pm$ 0.01 & 1.57 $\pm$ 0.05 \\
 \hline
 VR2B 1-tag & 97.37 $\pm$ 1.44 & 0.38 $\pm$ 0.02 & 2.25 $\pm$ 0.14 \\
 \hline
@@ -1274,7 +1316,7 @@ SRZH & 5038 & 717 & 84 \\
 
 \subsection{Normalization}
 \label{sec:bkg-normalization}
-As mentioned previously, three channels are distinguished for or all regions: 0-tag, 1-tag, and 2-tag.
+As mentioned previously, three channels are distinguished for all regions: 0-tag, 1-tag, and 2-tag.
 These channels are defined by the b-tagging pass/fail status for each of the two leading \pt\ ghost-associated track jets of the Higgs candidate large-R jet.
 Events from the 0-tag channel are used to estimate the shape of the background in the corresponding 1-tag and 2-tag channels.
 For all regions the 0-tag channel is $> 98\%$ pure in QCD events, as predicted by MC.
@@ -1291,10 +1333,10 @@ The goal is then to develop a strategy for predicting $\mu_{0 \rightarrow 1}$ an
 As mentioned previously, modelling the background shape with MC is not a reliable strategy for this analysis.
 For this reason the data from the control and validation regions are used to estimate the nominal values and uncertainties of \muOne and \muTwo.
 The nominal values are taken from the control region (CR).
-A systematic error for each channel is defined conservatively by the largest $\mu$ discrepancy between any two control or validation regions.
+A systematic error for each channel is defined conservatively by the largest $\mu$ difference between any two regions.
 The nominal values and errors for both normalization scale factors are:
 \begin{align}
-    \mu_{0 \rightarrow 1} &= 0.16 \pm 0.014\ \mathrm{(syst.)} \pm 7 \times 10^{-4}\ \mathrm{(stat.)} \\
+    \mu_{0 \rightarrow 1} &= 0.160 \pm 0.014\ \mathrm{(syst.)} \pm 7 \times 10^{-4}\ \mathrm{(stat.)} \\
     \mu_{0 \rightarrow 2} &= 0.0167 \pm 0.0028\ \mathrm{(syst.)} \pm 2 \times 10^{-4}\ \mathrm{(stat.)}
 \end{align}
 
@@ -1324,11 +1366,11 @@ The trends obvious in the ratio plots demonstrate the need for kinematic re-weig
 \subsection{Kinematic Re-weighting}
 \label{sec:bkg-reweighting}
 The 0-tag extrapolation method is based on the assumption that most kinematic variables in the 1-tag or 2-tag channels can be well modeled by the corresponding 0-tag channel.
-However, kinematic distribution can be easily biased when transferring from 0-tag sample to 1/2-tag sample for two main reasons:
+However, kinematic distributions can be biased when transferring from 0-tag sample to 1/2-tag sample for two main reasons:
 
 \begin{itemize}
     \item \textbf{Non-trivial kinematic dependency of track jets b-tagging efficiency}. Since the track jet b-tagging efficiency strongly depends on the track jet $p_{T}$ (and also some dependency on $\eta$), the kinematic distributions can be sculpted after applying b-tagging requirements.
-    \item \textbf{Change of heavy flavor composition}. For example, when moving from 0-tag to 2-tag samples, the fraction of $g\rightarrow bb$ in QCD will increase significantly, which has a different kinematics than the light-quark-dominant 0-tag sample. 
+    \item \textbf{Change of heavy flavor composition}. For example, when moving from 0-tag to 2-tag samples, the fraction of $g\rightarrow bb$ in QCD will increase significantly, which has a different kinematics than the light-quark-dominant 0-tag sample. Similarly, $g \rightarrow c\bar{c}$ fractions are like to differ between 0-tag and 1-tag.
 \end{itemize}
 
 A BDT-based approach \cite{BDTrw} has therefore been explored which ensures that the most relevant variables are being used for the reweighting.
@@ -1343,7 +1385,7 @@ Open source software based upon scikit-learn~\cite{scikitlearn} was used to perf
 
 The following variables are used as inputs to the re-weighting:
 \begin{itemize}
-    \itemsep0em 
+    \itemsep -0.5em 
     \item leading track jet $\pt, \eta, \phi, m$ and VR radius
     \item subleading track jet $\pt, \eta, \phi, m$ and VR radius
     \item H/V Candidate Large-R Jet \pt
@@ -1356,6 +1398,7 @@ The following variables are used as inputs to the re-weighting:
 
 \begin{table}[htbp!]
 \centering
+\begin{scriptsize}
 \begin{tabular}{c|c|c}
 \hline
 BDT Hyperparameter & Value & Description \\
@@ -1371,6 +1414,7 @@ Min. Samples per Leaf & 500 & \makecell{Minimum number of events allowed in each
 Subsample & 0.8 & \makecell{Proportion of the training set used for each \\ base tree for 'stochastic' gradient boosting.} \\
 \hline
 \end{tabular}
+\end{scriptsize}
 \caption{Summary of BDT hyperparameters used in the re-weighting process.}
 \label{tab:bdt_params}
 \end{table}
@@ -1380,7 +1424,6 @@ Subsample & 0.8 & \makecell{Proportion of the training set used for each \\ base
 
 In order to validate the performance of the BDT re-weighting procedure, comparisons to data are studied in the four validation regions: VR1A, VR1B, VR2A, and VR2B.
 Figures~\ref{fig:bdt_shape_mVH_1tag} and~\ref{fig:bdt_shape_mVH_2tag} show the \mvh\ distribution in each of these validations for the 1-tag and 2-tag channels, respectively.
-%The pre/post kinematic re-weighting distributions and their comparison to data are shown in Appendix~\ref{app:bdt_valid} for the other BDT training variables.
 
 One further way of validating the usefulness of the BDT re-weighting is to train binary classifiers using the re-weighting training variables to differentiate between pre and post reweighted data.
 Before re-weighting is applied, a properly trained binary classifier should have a (mildly) successful ability to differentiate between, for example, 0-tag and 1-tag.
@@ -1388,7 +1431,6 @@ After re-weighting is applied, a properly trained binary classifier should have 
 The relative ability of these two classifiers can be quantified by producing Receiver Operating Characteristic (ROC) curves, and these are shown in Figures~\ref{fig:bdt_roc_curves_1tag} and~\ref{fig:bdt_roc_curves_2tag} for 1-tag and 2-tag channels, respectively.
 The ability of the two classifiers can be distinguished by computing the area under the ROC curve (AUC), where a random chance classifier would have value of AUC = 0.5.
 
-%TODO: use VR2B plots from paper, as well as other track jet variables from paper aux. material
 \begin{figure}[htbp!]
 \begin{center}
 \includegraphics[width=0.40\textwidth]{BDT/VHqqbbBDTReweightShape_mVH_CR_0tag_to_1tag.pdf} \\
@@ -1424,7 +1466,7 @@ The ability of the two classifiers can be distinguished by computing the area un
     The red (PRE) line corresponds to the case where no re-weighting has been applied and the classifier is trained to discriminate 0-tag from 1-tag events in each region.
     The blue (POST) line corresponds to the case where re-weighting has been applied and the classifier is trained to discriminate re-weighted 0-tag events from unmodified 1-tag events in each region.
     Each classifier is trained only the set of variables use in the re-weighting.
-    In the ideal scenario of perfect re-weighting, the blue line would match very closely to the black line which represents a naieve 50/50 random chance classifier.
+    In the ideal scenario of perfect re-weighting, the blue line would match very closely to the black line which represents a naive 50/50 random chance classifier.
     The area under the curve (AUC) is shown for each classifier, where a value of 0.5 would correspond to ideal re-weighting.}
 \label{fig:bdt_roc_curves_1tag}
 \end{figure}
@@ -1451,7 +1493,26 @@ Due to the small number of events in the tail of the re-weighted background temp
 The first step in this process is to derive a well-motivated binning for the \mvh\ histograms based upon the experimental \mvh\ resolution.
 
 First the truth dijet mass ($m_{VH}^{\mathrm{truth}}$) is determined by $\Delta R$-matching both the $H$ and $V$ candidate fat jets to the corresponding \path{AntiKt10TruthTrimmedPtFrac5SmallR20Jets} large radius truth jet collection.
-For each WH signal mass point the residuals ($m_{VH} - m_{VH}^{\mathrm{truth}}$) are fitted with a Crystal Ball function, and the fitted $\sigma$ parameter from the Crystal Ball function is used a measure of the experimental resolution.
+For each WH signal mass value\footnote{No significant different in experimental resolution is observed between simulated WH and ZH signal samples} the residuals ($m_{VH} - m_{VH}^{\mathrm{truth}}$) are fitted with a Crystal Ball function, given by 
+
+\begin{equation}
+f(x;\alpha,n,\bar x,\sigma) = N \cdot
+    \begin{cases}
+        \exp(- \frac{(x - \bar x)^2}{2 \sigma^2}), & \mbox{for }\frac{x - \bar x}{\sigma} > -\alpha \\
+        A \cdot (B - \frac{x - \bar x}{\sigma})^{-n}, & \mbox{for }\frac{x - \bar x}{\sigma} \leqslant -\alpha
+    \end{cases},
+\end{equation}
+
+\begin{align*}
+A &= \left(\frac{n}{\left| \alpha \right|}\right)^n \cdot \exp\left(- \frac {\left| \alpha \right|^2}{2}\right),\\
+B &= \frac{n}{\left| \alpha \right|}  - \left| \alpha \right|,\\
+N &= \frac{1}{\sigma (C + D)},\\
+C &= \frac{n}{\left| \alpha \right|} \cdot \frac{1}{n-1} \cdot \exp\left(- \frac {\left| \alpha \right|^2}{2}\right),\\
+D &= \sqrt{\frac{\pi}{2}} \left(1 + \operatorname{erf}\left(\frac{\left| \alpha \right|}{\sqrt 2}\right)\right),
+\end{align*}
+ where $N$ is a normalization factor and $\alpha$, $n$, $\bar x$ and $\sigma$ are parameters which are fitted with the data.
+
+The resulting fitted $\sigma$ parameter from the Crystal Ball function is used a measure of the experimental resolution.
 Only events with correct truth-level H/V candidate assignment are considered.
 Figure~\ref{fig:mvh_reso_fits} shows the result of this fit for four representative mass points.
 The resulting $\sigma$ values are then fit as a linear function of resonance mass, as shown in Figure~\ref{fig:mvh_reso_trend}, and the result is used to derive a set of variable-width bins corresponding to the experimental \mvh\ resolution for the range of 1.3 to 7 TeV.
@@ -1463,7 +1524,7 @@ The resulting $\sigma$ values are then fit as a linear function of resonance mas
     \includegraphics[width=0.49\textwidth]{VHqqbb_WH_3500_ResoCrystalBall.pdf}
     \includegraphics[width=0.49\textwidth]{VHqqbb_WH_5000_ResoCrystalBall.pdf} \\
 \end{center}
-\caption{Results for Crystal Ball fits to the HVT WH dijet mass residuals ($m_{VH} - m_{VH}^{\mathrm{truth}}$) for 1.4, 2.5, 3.5 and 5.0 TeV mass points.}
+\caption{Results for Crystal Ball fits to the HVT WH dijet mass residuals ($m_{VH} - m_{VH}^{\mathrm{truth}}$) for 1.4, 2.5, 3.5 and 5.0 TeV mass values.}
 \label{fig:mvh_reso_fits}
 \end{figure}
 
@@ -1476,15 +1537,15 @@ The result of this fit is used to derive a set of variable width bins to utilize
 \label{fig:mvh_reso_trend}
 \end{figure}
 
-After the \mvh\ histograms are produced with the variable-binning described above, Eq. \ref{eq:dijet_smooth} is fitted to the prediction for each channel.
+After the \mvh\ histograms are produced with the variable-binning described above, Eq. \ref{eq:dijet_smooth} is fitted to the prediction for each channel with a three parameter function,
 \begin{align}
-    \frac{dn}{dx} &= e^{-p_0} \left(1 - x\right)^{-p_1} x^{-p_2}
+    \frac{dn}{dx} &= e^{-p_0} \left(1 - x\right)^{-p_1} x^{-p_2},
     \label{eq:dijet_smooth}
 \end{align}
 where $x = \frac{\mvh}{\sqrt{s}}$ and $p_0$ through $p_2$ are parameters determined by the fit.
 The normalization parameter is exponentiated as $e^{-p_0}$ to aid in numerical stability by avoiding very small values for $p_0$.
 This functional form models changes in the smoothly falling power-law behavior of the background.
-Fits are performed separately for 1-tag and 2-tag channel background estimates for each signal region and the results are shown in Figure~\ref{fig:sr_smoothed}.
+Fits are performed separately for 1-tag and 2-tag channel background estimates for each signal region.
 
 To achieve further numerical stability of the minimization algorithm used by the fit, the histograms are first normalized before fitting.
 After fitting, the histograms are re-scaled with the correct propagation of errors applied to both the statistical error of the fit as well as the normalization fit parameter $p_0$.
@@ -1492,7 +1553,7 @@ The fitting method used is a weighted maximum likelihood \footnote{This is achie
 This replaces the familiar Poisson likelihood with a modified approximate Poisson likelihood based on the number of \textit{effective entries} in each bin, defined as $\left(\sum w_i \right)^2 / \sum w_i^2$, where $w_i$ is the weight of the $i$-th event in the bin.
 
 The error on the fit is computed by taking the eigenvectors of the covariance matrix which describes the errors on the fit parameters.
-Each eigenvector is used to produce a new variation of the fit, and the differences between these variations and the nominal are summed in quadrature on a bin-by-bin level to produce the statistical errors associated with the fit.
+Each eigenvector is used to produce a new variation of the fit, and the differences between these variations and the nominal are summed in quadrature on a bin-by-bin level to produce the statistical errors associated with the fit as shown by the grey band in Figure~\ref{fig:sr_smoothed}.
 
 The $\frac{\chi^2}{n.d.f.}$ is computed by first rebinning the resulting pre/post-fitted histograms to achieve approximately gaussian statistics in each bin.
 This is done by searching the bins upwards, starting from 1.3 TeV, and finding the first bin with a number of effective entries (defined above) below five.
@@ -1539,48 +1600,67 @@ The $\frac{\chi^2}{n.d.f.}$ is then computed bin-by-bin with the standard formul
 \section{Statistical Method}
 \label{sec:statistics}
 
-\subsection{Overview}
-%TODO: cite hypothesis testing by gregory schott from 'data analysis in high energy physics' textbook
-%TODO: not just production cross section, but HVT model parameters
-%TODO: just replace this section with limited description as seen in ATLAS papers and other theses
-In the absence of a discovery, The primary goal of this thesis is to place limits on a particular parameter of the HVT model: the production cross section.
-This type of statistical inference is often called \textit{parameter estimation}, but more fittingly in this case, \textit{parameter constraint}. 
-We begin with two hypotheses: the null hypothesis $H_0$ and the alternative hypothesis $H_1$.
-In the context of a search for new physics $H_0$ is often referred to as the \textit{background-only hypothesis}, under the assumption that only Standard Model processes contribute to the observed data.
-The complementary $H_1$ hypothesis, known as the \textit{signal-plus-background hypothesis}, includes the contribution of the new physics signal in addition to the Standard Model background.
-For this analysis $H_1$ is in fact a family of hypotheses because both the resonance mass and production cross section are explored via continuous parameters of the HVT model.
+A frequentist interpretation of the data is applied via a binned maximum-likelihood (ML) fit performed on the $m_{VH}$ distribution, using the standard package RooStats \cite{Roostats}.
+The parameter of interest is the signal strength $\mu$, defined as the scale factor on the total number of signal events predicted by each of the models.
+The background only hypothesis corresponds to $\mu = 0$ and the nominal signal plus background hypothesis corresonds to $\mu = 1$.
+Histogram templates derived from MC simulation are used for the HVT W' and Z' processes, while the data-driven estimates are used for the combined $t\bar{t}$, $V$+jets, and QCD multijet background.
+The input histogram bounds are $[1.3, 6.0]$ TeV, and signal mass points up to 5 TeV are tested.
 
-The fundamental tool of frequentist hypothesis testing is the \textit{test statistic}, which is used to make quantitative statements about the data and its relationship to $H_0$ and $H_1$.
-Given some measurements $X$, a test statistic $t(X)$ can be any (scalar, for our purposes) function.
-There are, of course, desirable properties that constrain the types of functions that should be used as the test statistic.
-The final conclusions about the hypotheses are based upon the comparison of the observed value of $t(X)$ to some pre-determine \textit{critical region}.
-In our case of parameter constraint, the critical region is defined by a single cut value $t_c$.
-It is assumed that $t$ tends to have smaller values under $H_0$ and larger values under $H_1$, and thus the critical region is $t > t_c$.
+\subsection{Combined Fit}
+\label{sec:combined_fit}
+A simultaneous fit is performed to both 1-tag and 2-tag channels, as defined in~\ref{sec:SR}.
+This is done separately for each signal region and mass point with the following likelihood formula:
 
-The next ingredient needed is the probability density function of $t$ under a given hypothesis $H$, $g(t|H)$.
-% mention Wilks and Wald theorems
+\begin{equation}
+L(\mu, \vec{\theta}, \vec{\eta}, \vec{\gamma}) =
+\prod_{c=1}^{\mathrm{channels}}\; \prod_{\nu=1}^{\mathrm{bins}}
+P_{\mathrm{pois}}\left(N_{c\nu} | \mu s_{c\nu} + b_{c\nu}\right)
+\times
+\prod_{j \in\,\vec{\theta}} \mathcal{N}(\tilde{\alpha}_{j} | \alpha_{j})
+\times
+\prod_{k \in\,\vec{\eta}, \vec{\gamma}} \mathnormal{G}(\tilde{\beta}_{k} | \beta_{k})
+\end{equation}
 
-Two important quantities are defined via $g$,
-\begin{align}
-    \alpha &\equiv \int_{t_c}^{+ \infty} g(t|H_0)dt \\
-    \beta &\equiv \int_{-\infty}^{t_c} g(t|H_1)dt
-\end{align}
-The probability that to reject the background-only hypothesis ($H_0$) even though it is true is given by $\alpha$.
-The probability that to reject the signal-plus-background hypothesis ($H_1$) even though it is true is given by $\beta$.
-An ideal test statistic will minimize $\beta$ for a given $\alpha$.
-Often $\alpha$ is referred to as the \textit{significance level} of the test and $1-\beta$ is called the \textit{power} of the test.
-For a new physics search $\alpha$ must of necessity be quite small and is typically chosen to be 5\%.
-It is important to note at this point that the values of both $\alpha$ and $\beta$ are independent of the observed data $X$, rather they indicate something about the quality and characteristics of the statistical method that will eventually be applied to data.
+where
+\begin{itemize}
+\itemsep -0.5em
+    \item $P_{\mathrm{pois}}$ is the Poisson probability distribution function (PDF).
+    \item $N_{c\nu}$ is the observed number of events in the signal region data for the bin $\nu$ in the histogram for channel $c \in$~\{1-tag, 2-tag\}.
+    \item $\mu$ is the \textit{signal strength}, a continuous variable that parameterizes a multiplicative factor on the hypothetical signal cross section.
+    \item $s_{c\nu}$ is the number of signal events for bin $\nu$ of the histogram for channel $c$.
+    \item $b_{c\nu}$ is the expected number of background events for bin $\nu$ of the histogram for channel $c$.
+    \item $\vec{\theta}$ is the set of all normalization NPs.
+    \item $\vec{\eta}$ is the set of all shape-related NPs.
+    \item $\vec{\gamma}$ is the set of NPs denoting the statistical error on the individual bin contents of the signal and background histograms.
+    \item $\mathcal{N}(\tilde{\alpha}_{j} | \alpha_{j})$ is the log-normal PDF of the nuisance parameter $\alpha_j$ corresponding to the auxiliary measurement $\tilde{\alpha}_j$.
+    \item $\mathnormal{G}(\tilde{\beta}_{k} | \beta_{k})$ is the Gaussian PDF of the nuisance parameter $\beta_k$ corresponding to the auxiliary measurement $\tilde{\beta}_k$.
+\end{itemize}
 
-There is some freedom allowed in the choice of $t(X)$, but when dealing in so-called \textit{simple hypotheses}, as we are here, the Neyman-Pearson lemma states that the \textit{likelihood ratio} is the most powerful test for any given significance level $\alpha$.
+Both $s_{c\nu}$ and $b_{c\nu}$ themselves depend upon a subset of the nuisance parameters $\vec{\theta}$ and $\vec{\eta}$ as described in section~\ref{sec:syst}.
+Nuisance parameters which produce bin variations which are smaller than 1\% with respect to the nominal bin contents are pruned away.
+For each bin in each histogram, interpolation must be performed between the nominal bin prediction and the variations induced by the nuisance parameters to produce the actual value of $s_{c\nu}$ and $b_{c\nu}$ used to compute the likelihood.
+Details on the benefits and drawbacks of various interpolation options, as well as the default options used here, are discussed in~\cite{HistFactory2012}.
 
-\subsection{CLs Method}
-\dots
+\subsection{Upper Limits on Cross Section}
+Upper limits on the signal strength $\mu$ are set using a modified frequentist method ($CL_s$)~\cite{Read:451614}.
+The values $CL_{s+b}$ and $CL_b$ are computed using an asymptotic method~\cite{asymptotics} and correspond to the p-values for the signal-plus-background and background-only hypothesis, respectively.
+Limits at 95\% confidence level on the signal strength can be computed by (1) scanning values of $\mu$ (2) computing $CL_s$ and (3) identifying $\mu_{0.05}$ (the value of $\mu$ at which $CL_s$ = 0.05).
+
+For the calculation of the p-values used in this computation, a test statistic $\lambda(\mu)$ is defined as a profile-likelihood ratio:
+\[ \lambda(\mu) = \begin{cases}
+    -2 \ln{\frac{L(\mu, \hat{\hat{\Theta}}(\mu)}{L(\hat{\mu}, \hat{\Theta})}}, & 0 \leq \hat{\mu} \leq \mu \\
+        0, & \hat{\mu} > \mu \\
+    -2 \ln{\frac{L(0, \hat{\hat{\Theta}}(0)}{L(\hat{\mu}, \hat{\Theta})}}, & \hat{\mu} < 0 \\
+   \end{cases}
+\]
+where $L$ is the likelihood and $\Theta \equiv \{\vec{\theta}, \vec{\eta}, \vec{\gamma}\}$ is the full set of all nuisance parameters, all described in~\ref{sec:combined_fit}.
+The global best fit values for $\mu$ and $\Theta$ are denoted $\hat{\mu}$ and $\hat{\Theta}$, while the best fit values of $\Theta$ for a particular value of $\mu$ are denoted $\hat{\hat{\Theta}}(\mu)$.
+This ratio of likelihoods, for the case of a given $\mu$ hypothesis, quantities the compatibility of the data with such a hypothesis.
 
 \section{Systematic Uncertainties}
 \label{sec:syst}
 
-This section describes the sources of systematic uncertainties considered in this analysis, which are divided into two main categories: experimental uncertainties and the uncertainties on the modelling of the dominant multijet background. The impact of these uncertainties is estimated on the final discriminant variable ($m_{JJ}$).
+This section describes the sources of systematic uncertainty considered in this analysis, which are divided into two main categories: experimental uncertainties, which impact only the signal distributions because the background is data-driven, and the uncertainties in the modelling of the background estimate. The impact of these uncertainties is estimated on the final discriminant variable ($m_{JJ}$).
 
 \subsection{Experimental Uncertainties}
 \label{sec:syst-exp}
@@ -1592,8 +1672,8 @@ This uncertainty is applicable only to the simulated signal samples and has only
 \subsubsection{Large-$R$ Jet $p_T$ scale and resolution}
 Uncertainty in the jet \pt\ scale (JpTS) is an important uncertainty to consider in any search for resonant structures with a smoothly falling dijet background.
 The effect of this uncertainty manifests as a shift in the peak of the expected signal mass spectrum, which alters the significance of any observed excess.
-The uncertainties on the jet \pt scale (JpTS) are evaluated by the combined performance groups using track-to-calorimeter double ratios between data and MC.
-Discrepancies observed between data and MC are assigned as uncertainties on the \pt scale of the jet.
+The uncertainties on the jet \pt\ scale (JpTS) are evaluated by the combined performance groups using track-to-calorimeter double ratios between data and MC.
+Discrepancies observed between data and MC are assigned as uncertainties on the \pt\ scale of the jet.
 
 %The details of this procedure are summarized in detail on the JetEtmiss twiki\footnote{\url{https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/RTrackUncertaintyGuide}}.
 The ratio of the two measures of jet \pt\ (calorimeter-based and track-based) is expected to be the same (though not equal to one) in both data and MC.
@@ -1612,11 +1692,11 @@ The uncertainties are computed in bins of $\frac{m_{jet}}{p_T^{jet}}$ and $\eta$
 %    \item \path{FATJET_JET_Rtrk_Tracking_pT}
 %\end{enumerate}
 
-Due to the unique track-influenced nature of TCC jets, the impact of possible correlations between track-based \pt\ and calo-based \pt\ were studied by considering a comparison via the double-ratio method between calo-based (LCTopo) jets and TCC jets.
-The results are shown in Figure~\ref{fig:tcc_lctopo_calib}, and the observed descrepancy was found to have a maximum value of 2\% and the effect is thus ignored.
+Due to the unique track-influenced nature of TCC jets, the impact of possible correlations between track-based \pt\ and calo-based \pt\ were studied by considering a data/MC comparison method between calo-based (LCTopo) jets and TCC jets.
+The results are shown in Figure~\ref{fig:tcc_lctopo_calib}, and the observed discrepancy was found to have a maximum value of 2\% and the effect is thus ignored.
 
 Uncertainties due to jet \pt\ measurement resolution (JpTR) would lead to a mis-measurement of the width of any observed signal and impact the signal selection efficiency.
-Additional uncertainties due to the jet energy are estimated by applying a Gaussian smearing which degrades the nominal \pt resolution of jets by an absolute 2\%. %as recommended by the JetMet working group\footnote{\url{https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/JetUncertainties2016Moriond2017\#Resolution_uncertainties}}.
+Additional uncertainties due to the jet energy are estimated by applying a Gaussian smearing which degrades the nominal \pt\ resolution of jets by an absolute 2\%. %as recommended by the JetMet working group\footnote{\url{https://twiki.cern.ch/twiki/bin/viewauth/AtlasProtected/JetUncertainties2016Moriond2017\#Resolution_uncertainties}}.
 The changes to the overall yield and \mvh\ shape are then assigned as  'up' variations, and the corresponding 'down' variation is taken by mirroring the difference between the nominal and 'up' variations.
 
 \begin{figure}[htbp!]
@@ -1634,7 +1714,8 @@ The changes to the overall yield and \mvh\ shape are then assigned as  'up' vari
 \begin{center}
 \includegraphics[width=0.7\textwidth]{tcc_track_calo_correlation.png}
 \end{center}
-\caption{Average ratio of (jet \pt\ double ratio for TCC jets) to (jet \pt\ double ratio for LCTopo jets) as a function of \pt\ for anti-$k_t$, $R=1.0$ jets with $|\eta| < 2$.
+\caption{Average ratio of jet \pt\ for TCC jets to jet \pt\ for LCTopo jets as a function of \pt\ for anti-$k_t$ $R=1.0$ jets with $|\eta| < 2$.
+© CERN
 }
 \label{fig:tcc_lctopo_calib}
 \end{figure}
@@ -1668,21 +1749,21 @@ The number of systematic variations is ultimately reduced by summing together th
 %TODO: describe VVJJ method
 Additional uncertainties related to boson tagging can impact both the V/H tagging efficiency as well as the resulting dijet mass shape.
 These uncertainties include jet mass scale (JMS), jet mass resolution (JMR), jet \d2 resolution (D2R) and uncertainties due to the \ntrk variable.
-The JMR and JMS systematic uncertainties for TCC jets are officially provided by JetETMiss and included in the analysis.
+The JMR and JMS systematic uncertainties for TCC jets are officially provided by ATLAS Jet working group and included in the analysis.
 Since vector boson tagging and Higgs boson tagging implement different selections using different observables, a separate description of the signal systematic uncertainties related to the two taggers is provided in the following paragraphs.
 In the end the V boson and H boson systematics are treated as uncorrelated.
 
 \subsubsection{Vector boson tagging scale factor and uncertainties}
 \label{sec:syst-vec-boson}
-As already described in Sec.~\ref{subsec:tagger_opt}, this analysis uses a modified version of the 3 variables (jet mass, \d2, and \ntrk) vector-boson tagger optimised by the fully-hadronic diboson resonance search team for the full Run-2 paper~\cite{VVJJPaper2019}. Jet invariant mass and \d2 selections follow exactly the same definitions of the ones used in the fully hadronic diboson resonance search, while the \ntrk selection has been loosened by the maximum sensitivity optimisation performed for the event selection of this analysis.
+As already described in Section~\ref{subsec:tagger_opt}, this analysis uses a modified version of the 3 variables (jet mass, \d2, and \ntrk) vector-boson tagger optimised by the fully-hadronic diboson resonance search team for the full Run-2 paper~\cite{VVJJPaper2019}. Jet invariant mass and \d2 selections follow exactly the same definitions as the ones used in the fully hadronic diboson resonance search, while the \ntrk selection has been loosened by the maximum sensitivity optimisation performed for the event selection of this analysis.
 Given the shape of the \ntrk distribution for vector bosons, a small change in the \ntrk selection (VH allows on average 3 more tracks than VVJJ for both W-boson and Z-boson selection) produces a small and almost linear change in signal efficiency.
-For this reason, same boson tagging scale factor and relative systematic uncertainty derived in the VVJJ analysis is applied in this analysis.
-In particular, a data-to-MC SF of $0.92\pm0.13$ is applied to our MC signals. The 0.13 is considered as signal normalisation scale factor uncertainty. It includes high \pt~ extrapolation, modelling uncertainties, impact of jet mass scale and resolution, and fitting uncertainties.
+For this reason, the same boson tagging scale factor and relative systematic uncertainty derived in the VVJJ analysis is applied in this analysis.
+In particular, a data-to-MC SF of $0.92\pm0.13$ is applied to our MC signals, which was derived via studies of W/Z tagging in real $V$+jets events in data/MC. The 0.13 is considered as signal normalisation scale factor uncertainty. It includes high \pt\ extrapolation, modelling uncertainties, impact of jet mass scale and resolution, and fitting uncertainties.
 
 \subsubsection{Systematic uncertainties for Higgs tagging}
 \label{sec:syst-h-boson}
 Given the very small cross section of the Higgs boson, it is not possible to define a H+jets control region where a data-to-MC H-tagging scale factor for \ntrk selection can be evaluated.
-In the 2017 fully hadronic diboson resonance search ~\cite{VVJJPaper2017}, a $1.03\pm0.05$ data-to-MC scale factor for \ntrk in vector bosons has been measured in V+jets control region.
+In the 2017 fully hadronic diboson resonance search ~\cite{VVJJPaper2017}, a $1.03\pm0.05$ data-to-MC scale factor for \ntrk in vector bosons has been measured in a V+jets control region.
 
 Summing in quadrature the $3\%$ scale factor with the $5\%$ systematic uncertainty, the fully hadronic diboson resonance search considered a conservative 6\% data-to-MC scale factor for the \ntrk variable.
 The impact of this scale factor on the signal normalisation was observed to be approximately 13\%.
@@ -1736,16 +1817,17 @@ A comparison of TCC vs. LCTopo large-R Higgs jet mass resolution is shown in Fig
     Fractional Jet Mass Resolution (JMR) for truth Higgs jets with pre-selection applied.
     The JMR is computed here from a Gaussian fit, as opposed to the method from JetEtMiss utilizing the interquartile range (IQR).
     This yields a larger, more conservative value for the JMR.
+    © CERN
 }
 \label{fig:jmr_higgs}
 \end{figure}
 
 \subsubsection{$\mu$ Uncertainty}
-The uncertainty on the background normalization estimate from statistical as well as non-closure related uncertainty is described in section \ref{sec:bkg-normalization}.
+The uncertainty on the background normalization estimate from statistical as well as non-closure related uncertainty is described in Section \ref{sec:bkg-normalization}.
 
 \subsubsection{BDT Re-Weighting Uncertainty}
 The BDT re-weighting algorithm is trained in the control region (CR) and applied to the validation and signal regions.
-To account for the uncertainty in this extrapolation, a shape systematic is derived by applying the background fitting method outlined in Section~\ref{sec:bkg_fitting} to both the BDT re-weighted prediction as well as the actual data in a particular validation region (VR2B) chosen due to the high event yield.
+To account for the uncertainty in this extrapolation, a shape systematic uncertainty is derived by applying the background fitting method outlined in Section~\ref{sec:bkg_fitting} to both the BDT re-weighted prediction as well as the actual data in a particular validation region (VR2B) chosen due to the high event yield.
 The ratio of the smoothed fits of the BDT prediction and data, shown in Figure~\ref{fig:bdt_shape_syst}, is used to produce \mvh-dependent weights.
 These weights are then used to produce up/down shape variations for each signal region and channel.
 The predominant effect of this uncertainty manifests in the high \mvh\ tail.
@@ -1763,10 +1845,10 @@ To allow more flexibility in the likelihood fit, this systematic is split into t
 \label{fig:bdt_shape_syst}
 \end{figure}
 
-\subsubsection{Background Fitting Function Choice Uncertainty}
-Systematic uncertainty due to the choice of fit function is considered by applying the same method described in Section~\ref{sec:bkg_fitting}, but with a different fitting function: $e^{-p_0} \left(1 - x\right)^{-p_1} \left(1+x\right)^{-p_2 \log{x}}$.
+\subsubsection{Background Smoothing Function Choice Uncertainty}
+Systematic uncertainty due to the choice of fit function is considered by applying the same method described in Section~\ref{sec:bkg_fitting}, but with a different smoothing function: $e^{-p_0} \left(1 - x\right)^{-p_1} \left(1+x\right)^{-p_2 \log{x}}$.
 Results are shown in Figure~\ref{fig:sr_smoothed_variation}.
-To allow more flexibility in the likelihood fit, this systematic is split into two separate low/high mass regions below/above 2.5 $TeV$.
+To allow more flexibility in the likelihood fit, this systematic uncertainty is split into two separate low/high mass regions below/above 2.5~TeV.
 
 \begin{figure}[htbp!]
 \begin{center}
@@ -1795,9 +1877,9 @@ For all signal regions and mass points the impact was shown to be less than 1\%,
 \subsubsection{ISR/FSR Uncertainties}
 
 Any choice of MC tune merits the use of additional systematic uncertainties to cover variations in Initial State Radiation (ISR), Final State Radiation (FSR), and Multi-Parton Interactions (MPI).
-Expected effect on signal efficiency is evaluated at truth level before applying boson tagging cuts, following the same procedure as for the PDF variations described above.
+The expected effect on signal efficiency is evaluated at truth level before applying boson tagging cuts, following the same procedure as for the PDF variations described above.
 
-The impact on on signal acceptance times efficiency is demonstrated in Figure~\ref{fig:isr_fsr_impact}.
+The impact on signal acceptance is demonstrated in Figure~\ref{fig:isr_fsr_impact}.
 In the final results a flat systematic uncertainty on the signal normalization of 2\%(3\%) for WH(ZH) is used.
 
 \begin{figure}[htbp!]

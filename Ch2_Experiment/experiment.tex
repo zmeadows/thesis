@@ -79,7 +79,7 @@ An alternative way to express \InstLumi\ in terms of beam quantities allows the 
 \label{eqn:inst_lumi_beam}
 \end{equation}
 where $\Sigma_x, \Sigma_y$ are the convolved beam size $\left(\Sigma_{x/y} = \sqrt{\sigma_{x/y,1}^2 + \sigma_{x/y,2}^2}\right)$ in the $x$/$y$ plane and $N_1$/$N_2$ are the number of protons in each bunch.
-The values for $\Sigma_{x/y}$ are measured with the ATLAS detector during special data-taking periods \cite{ATLAS-CONF-2019-021} using techniques known as van der Meer scans, during which a small separation is induced and varied along the axes transverse to the collisions. In addition to the quantities shown in Eq.~\ref{eqn:inst_lumi_beam} and Eq.~\ref{eqn:inst_lumi_ring}, the optimization of $\InstLumi$ at the LHC includes consideration of beam properties such as the crossing angle $(\theta_c)$ and longitudinal compression $(\beta^*)$ around the IP.
+The values for $\Sigma_{x/y}$ are measured with the ATLAS detector during special data-taking periods \cite{ATLAS-CONF-2019-021} using techniques known as van der Meer scans, during which a small separation is induced and varied along the axes transverse to the collisions. In addition to the quantities shown in Eq.~\ref{eqn:inst_lumi_beam} and Eq.~\ref{eqn:inst_lumi_ring}, the optimization of $\InstLumi$ at the LHC includes consideration of beam properties such as the crossing angle $(\theta_c)$ and longitudinal compression $(\beta^*)$ around the interaction point (IP).
 
 Ultimately the \textit{integrated luminosity} $L$ determines the number of events observed by a collider experiment.
 \begin{equation}
@@ -106,7 +106,7 @@ At the time of the writing of this thesis the LHC is in the midst of the second 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.9\textwidth]{lhc_timeline}
-	\caption{Timeline of the LHC program up to the high-luminosity LHC (HL-LHC).}
+	\caption{Timeline of the LHC program up to the high-luminosity LHC (HL-LHC). © CERN}
 	\label{fig:lhc_timeline}
 \end{figure}
 
@@ -119,7 +119,7 @@ The final measured integrated luminosity luminosity values for Run-2, along with
 \begin{figure}
 	\centering
 	\includegraphics[width=0.65\textwidth]{int_lumi_vs_year}
-	\caption{Cumulative luminosity versus day delivered to ATLAS during stable beams for high energy p-p collisions.}
+	\caption{Cumulative luminosity versus day delivered to ATLAS during stable beams for high energy p-p collisions. © CERN}
 	\label{fig:int_lumi_vs_year}
 \end{figure}
 
@@ -184,8 +184,8 @@ When describing the products of a collision event it is often more useful to use
 
 These polar coordinates are defined as follows:
 \begin{align}
-\phi &= \arctan\left( {\frac{x}{y}} \right) \\
-\theta &= \arctan \left( {\frac{\sqrt{x^2+y^2}}{z}} \right)
+\phi &= \arctan\left( {\frac{y}{x}} \right) \\
+\theta &= \arctan \left( {\frac{z}{\sqrt{x^2+y^2}}} \right)
 \label{eqn:polar_coordinates}
 \end{align}
 where $\theta$ is the \textit{polar} angle and $\phi$ is the \textit{azimuthal} angle.
@@ -210,27 +210,28 @@ A measure of distance\footnote{The radial distance from the beam center $\left(R
 \begin{figure}
 	\centering
 	\includegraphics[width=0.4\textwidth]{pseudorapidity}
-	\caption{Example values of pseudorapidity. The value of $\eta$ approaches infinity as the beam line ($z$-axis, towards the right) is approached. }
+	\caption{Example values of pseudorapidity. The value of $\eta$ approaches infinity as the beam line ($z$-axis, towards the right) is approached. A value of $\eta = 0.5$ corresponds to a polar angle of 27.5 degrees, $\eta = 1.0$ corresponds to 49.6 degrees, $\eta = 1.5$ corresponds to 64 degrees, $\eta = 4$ corresponds to 87.9 degrees. }
 	\label{fig:pseudorapidity}
 \end{figure}
 
-When measuring the properties of collision products, the momentum they possess along the beam line is less important than their momentum perpendicular to the beam line. This is because the momentum along the beam line is in large part left over from their acceleration around the ring, while the perpendicular momentum is purely a consequence of whatever physics occurred during the collision due to conservation of momentum.
+When measuring the properties of collision products, the momentum they possess along the beam line is less important than their momentum perpendicular to the beam line. This is because the momentum of the colliding particles along the beam line is unknown, while the perpendicular momentum is purely a consequence of whatever physics occurred during the collision due to conservation of momentum.
 For this reason the \textit{transverse momentum} and \textit{transverse energy} are more often used instead, and defined as
 \begin{align}
 p_T &= \sqrt{p_x^2 + p_y^2} \\
-E_T &= \sqrt{E_x^2 + E_y^2}
+E_T &= E \sin(\theta) = E \sinh(\eta).
 \label{eqn:transverse_momentum_energy}
 \end{align}
+Both of these quantities are invariant with respect to boosts along the beam axis.
 
 \subsection{Inner Detector}
 \label{sec:inner_detector}
 The ATLAS Inner Detector (ID) \cite{CERN-LHCC-97-016} \cite{ATLAS-TDR-2008} is a tracking detector that records the paths taken by charged particles as they emerge from the collisions around the IP.
-Two of the primary design goals for the ID are to provide a transverse momentum resolution of $\frac{\sigma_{p_T}}{p_T} = 0.05\% \times p_T \oplus 1\%$ and a transverse impact parameter\footnote{See Section TODO for impact parameter definitions} resolution of $10 \mu$m for high momentum partices in the central pseudorapidity region \cite{ATLAS-TDR-2008}.
+Two of the primary design goals for the ID are to provide a transverse momentum resolution of $\frac{\sigma_{p_T}}{p_T} = 0.05\% \times p_T \oplus 1\%$ and a transverse impact parameter resolution of $10 \mu$m for high momentum partices in the central pseudorapidity region \cite{ATLAS-TDR-2008}.
 
 The ID is itself composed of four separate concentric detectors: The Insertable B-Layer (IBL), the Pixel detector, the Semiconductor Tracker (SCT), and the Transition Radiation Tracker (TRT).
 These individual subdetectors can be seen in Fig.~\ref{fig:inner_detector_cgi}.
 A more detailed view of the sensor components from each subdetector within the Inner Detector is shown in Fig.~\ref{fig:inner_detector_zoomed_cgi}.
-The active area of the Inner Detector extends up to $|\eta| < 3$ for the IBL and $|\eta| < 2.5$ for the Pixel/SCT.
+The active area of the Inner Detector extends up to $|\eta| < 3$ for the IBL, $|\eta| < 2.5$ for the Pixel/SCT, and $|\eta| < 2.0$ for the TRT.
 
 The entire Inner Detector is immersed in an axial symmetric $2T$ magnetic field provided by an enclosing solenoid magnet.
 The magnet is 5.3 m long, 2.4 m in diameter, 4.5 cm thick and weighs approximately 5 metric tonnes.
@@ -262,12 +263,12 @@ This improves the quality of primary vertex reconstruction and makes it possible
 \end{figure}
 
 \subsubsection{Insertable B-Layer (IBL)}
-The IBL~\cite{Capeans:1291633} is the innermost and newest layer of the Inner Detector, installed in 2014 during the first long shutdown period of the LHC.
+The IBL~\cite{Capeans:1291633, Abbott:2018ikt} is the innermost and newest layer of the Inner Detector, installed in 2014 during the first long shutdown period of the LHC.
 The purpose of the IBL is primarily to improve the measurement resolution of the transverse and longitudinal impact parameters of tracks, particularly in the face of increased pileup and luminosity during the HL-LHC phase.
 These impact parameters are of crucial importance for vertex reconstruction and the identification of $b$-jets. \znote{cite relevant sections}
 
 The IBL is located at an average radial distance of 33 mm from the center of the beam pipe, covers $332$mm in the z-direction, and extends the active tracking area up to $|\eta| < 3$ compared to the $|\eta| < 2.5$ coverage of the ID without the IBL.
-The planar pixel sensors in the central $|\eta|$ region of the IBL have an instrinsic resolution of $8 \times 40 \mu \mathrm{m}^2$, which allows for precise measurements of charged particle momentum.
+The planar pixel sensors in the central $|\eta|$ region of the IBL have an instrinsic resolution of approximately $0.01$ to $0.04$mm in $R-\phi$ and $0.6$ to $1.8$mm in $z$, which allows for precise measurements of charged particle momentum.
 
 \subsubsection{Pixel}
 The Pixel detector barrel is composed of three concentric cylindrical layers of silicon semiconductor staves at radial distances of 50.5, 88.5 and 122.5 mm which extend to $|z| \approx 400$ mm on either side.
@@ -286,7 +287,7 @@ The barrel layers are arranged in a turbine-like fashion with an overlap in $\ph
 
 \subsubsection{Semiconductor Tracker (SCT)}
 The Semiconductor Tracker (SCT) is a silicon microstrip detector with 4088 modules arranged in four concentric barrels (2112 modules) and two endcaps (988 modules per endcap) of nine disks each.
-The use of strips instead of pixels is required due to the much larger coverage area (63 $\mathrm{m}^2$ vs. 1.7 $\mathrm{m}^2$) of the SCT when compared compared to the Pixel detector.
+The use of strips with dimension $63.56 \times 63.96$mm$^2$ instead of pixels is required due to the much larger coverage area (63 $\mathrm{m}^2$ vs. 1.7 $\mathrm{m}^2$) of the SCT when compared compared to the Pixel detector.
 The silicon-strip detector technology further differs from pixels by requiring the combination of two measurements from separate strips aligned at stereo angles for each particle position measurement.
 The SCT typically provides eight strip measurements (four position measurements) for each particle, with an intrinsic resolution of $17 \mu$m perpendicular to the strips in the $R-\phi$ plane (barrel) and 580 $\mu$m parallel to the beam in $z$ (barrel) and $R$ (end-cap).
 
@@ -300,7 +301,7 @@ Since transition radiation is more prominent in high-momentum, low-mass particle
 \label{sec:calorimeters}
 
 The calorimeter system measures particle energy and is located directly outside the solenoidal magnet surrounding the ID (Fig.~\ref{fig:calorimeter}).
-The ATLAS calorimeter system is designed to fully absorb both charged and neutral particles\footnote{There are a few exceptions to this: muons, neutrinos, and extremely high energy particles that may ``punch through''.} such that they deposit their full energy into the active calorimeter detector material.
+The ATLAS calorimeter system is designed to fully absorb both charged and neutral particles\footnote{There are a few exceptions to this: muons, neutrinos, and extremely high energy particles that may ``punch through''.} such that they deposit their full energy into the calorimeter detector material.
 Each separate ATLAS calorimeter technology provides granular coverage segmented in both $\eta$ and $\phi$.
 Though they can provide some information about the direction of particles, the $\eta-\phi$ granularity of the calorimeter does not compare to that of the ID.
 
@@ -328,7 +329,7 @@ Three separate cryostats are installed to to keep the liquid argon below its boi
 The EMB has three layers, each with slightly different purpose and segmentation granularity, as shown in Fig.~\ref{fig:em_calo_segment}.
 The first layer is composed of narrow (in $\eta$) strips which provide precise measurements during the initial showering process.
 The second layer is composed of square cells and is designed to fully capture moderate energy $(E < 50 \ \mathrm{GeV})$ photons and electrons.
-The final layer of the EMB is less granular and meant to provide additional stopping power for higher energy photons and electrons.
+The final layer of the EMB is less granular and meant to provide additional information about the longitudinal shower development for higher energy photons and electrons.
 The EMEC follows the EMB segmentation design up until the end of tracking acceptance $(|\eta| < 2.5)$, after which it becomes coarser-grained with only two sampling layers.
 \znote{define X0}
 
@@ -362,7 +363,7 @@ The first modules (closest to the beam line) use copper as an absorber and perfo
 \subsubsection{Calorimeter Resolution}
 The calorimeter energy resolution can be generically parameterized as
 \begin{equation}
-    \frac{\sigma(E_0)}{E_0} = \frac{a}{\sqrt{E_0}} \oplus \frac{b}{E_0} \oplus c
+    \frac{\sigma(E)}{E} = \frac{a}{\sqrt{E}} \oplus \frac{b}{E} \oplus c
     \label{eqn:calo_res}
 \end{equation}
 where $a$ is a stochastic/sampling term representing an intrinsic resolution limit due to particle fluctuations within the shower, $b$ is a noise term determined primarily by electronics noise and pileup, and $c$ is a constant term which dominates at high incident particle energy which is due to non-linearities in calorimeter response caused by inhomogeneity in detector materials, leakage due to un-absorbed particles from the shower, and calibration imperfections.
@@ -372,7 +373,7 @@ The $\oplus$ operator denotes that each contributing term is summed in quadratur
 The $a$ and $c$ quantities have been carefully measured for the ATLAS calorimeters \cite{Aharrouche_2006, Strizenec:2009zz, Cojocaru:2004jk, Adragna:2009zz} and are summarized in Table~\ref{tab:calo_res}.
 The degradation of performance when moving towards higher values of $|\eta|$ is due primarily to the increased presence of pileup in these more forward regions closer to the beam line.
 \znote{make sure pileup is defined somewhere previously}
-The electronics/pileup noise for each type of calorimeter is shown in Fig.~\ref{fig:calo_noise}.
+The electronics/pileup noise ($b$) for each type of calorimeter is shown in Fig.~\ref{fig:calo_noise}.
 Increased noise is acceptable in the more forward regions because the higher (on average) incident particle energy there diminishes the effect of the first two terms in Eq. \ref{eqn:calo_res}.
 
 \begin{table}
@@ -412,29 +413,43 @@ Hadronic Forward & 98.5 $\pm$ 4.0 & 6.4 $\pm$ 0.04 \\
 \label{sec:muon_spectrometer}
 Muons are unique among the common Standard Model $p$-$p$ collision products by virtue of their long lifetime $(2.2 \mu s)$, weakly interacting nature, high production momentum and high mass $(\approx 200 \times m_e)$.
 Due to these properties, muons pass through the ATLAS calorimeters without depositing a significant portion of their energy and leave only a weak ionization trail behind.
-This necessitates the existence of the final outermost layer of the ATLAS detector: the Muon Spectrometer (MS) \cite{CERN-LHCC-97-022}.
+This necessitates the existence of the final outermost layer of the ATLAS detector: the Muon Spectrometer (MS) \cite{CERN-LHCC-97-022}, shown in Figure~\ref{fig:muon_spectrometer_cutout}.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.75\textwidth]{muon_subsystem}
+	\caption{ATLAS Experiment Muon Spectrometer. © 2014 CERN}
+	\label{fig:muon_spectrometer_cutout}
+\end{figure}
 
 The MS consists of three air-core superconducting toroidal magnet systems (see Fig.~\ref{fig:ATLAS_magnet_system}) and four separate types of tracking chambers covering a region of up to $|\eta| < 2.7$, extending from a radius of 4.25m to 11m.
 The magnet system of the MS serves to bend the trajectories of muons in the $R-z$ plane.
-The large barrel toroid magnet (0.5 T) is active for $|\eta| < 1.4$, and the two smaller end-cap magnets (1 T) are active in the range $1.6 < |\eta|\ < 2.7$.
+The large barrel toroid magnet strength depends strongly on $\phi$ and is active for $|\eta| < 1.6$.
+The two smaller end-cap magnets (1 T) are active in the range $1.6 < |\eta|\ < 2.7$.
 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.6\textwidth]{magnet_systems}
 	\caption{Illustration of the ATLAS magnet system. \cite{CERN-LHCC-97-018}
-	The barrel region toroid magnet is shown in red and the two end-cap toroid magnets are shown in green. The inner solenoid is shown in blue, which is parallel to the beam pipe.}
+	The barrel region toroid magnet is shown in red and the two end-cap toroid magnets are shown in green. The inner solenoid is shown in blue, which is parallel to the beam pipe. © 2013 Jet Goodson}
+	
 	\label{fig:ATLAS_magnet_system}
 \end{figure}
 
 The MS is composed of several different types of detector technologies which are designed for two separate use-cases: (1) extending the precision tracking of each individual muon beyond the ID measurements and (2) fast readouts for the ATLAS trigger system.
 Monitored Drift Tube Chambers (MDT) and Cathode Strip Chambers (CSC) are used for the high precision tracking measurements, while Resistive Plate Chambers (RPC) and Thin Gap Chambers (TGC) are less precise but provide a much faster readout, on the scale of nanoseconds, for the trigger system.
+A cross section of the muon spectrometer highlighting the various sub-components is shown in Figure~\ref{fig:muon_spectrometer_cross_section}.
 The tracking coverage $(|\eta| < 2.7$) of the MS is more complete than the trigger coverage $(|\eta| < 2.4)$.
 Like the other major ATLAS detector components, the MS is split into separate barrel $(|\eta| < 1.05)$ and endcap $(1.05 < |\eta| < 2.7)$ regions.
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.75\textwidth]{muon_subsystem}
-	\caption{ATLAS Experiment © 2014 CERN}
+	\includegraphics[width=0.9\textwidth]{muon_spectrometer_quadrant}
+	\caption{
+	 Cross-section of a quadrant of the ATLAS Muon Spectrometer \cite{kuger2017signal} in the $R-z$ plane (left) and the $R-\phi$ plane (right) comprising all detector modules. The naming of MDT chambers is based on their location in the barrel or end-cap (B,E), in the inner, middle, or outer layer (I, M, O) and in either the a large or a small sector (L,S).
+	 © CERN
+	}
+	\label{fig:muon_spectrometer_cross_section}
 \end{figure}
 
 The MDT chambers are used for precision tracking of the $R-z$ plane curvature of muons.
@@ -455,15 +470,8 @@ Each CSC chamber consists of both a multi-wire proportional drift chamber as wel
 The parallel cathode strips provide precision tracking measurement in the bending plane, while the perpendicular cathode strips provide measurements of $\phi$.
 
 The TGC chambers are similar to the CSC chambers in design and consist of 50 $\mu m$ gold-plated tungsten anode wires, but with smaller gaps between electrodes for faster readouts.
-They only provide measurement of the $\phi$ coordinate and cover the $1.0 < |\eta| < 2.4$ region.
+They provide measurements of the $R$-$z$ and $\phi$ coordinates, covering the $1.0 < |\eta| < 2.4$ region.
 
-\begin{figure}
-	\centering
-	\includegraphics[width=0.9\textwidth]{muon_spectrometer_quadrant}
-	\caption{
-	 Cross-section of a quadrant of the ATLAS Muon Spectrometer \cite{kuger2017signal} in the $R-z$ plane (left) and the $R-\phi$ plane (right) comprising all detector modules. The naming of MDT chambers is based on their location in the barrel or end-cap (B,E), in the inner, middle, or outer layer (I, M, O) and in either the a large or a small sector (L,S).
-	}
-\end{figure}
 
 % \subsection{Forward Detectors}
 % The ATLAS experiment has additional detectors situated far away (20+ meters) from the interaction point which each serve a unique, specialized purpose.
@@ -496,7 +504,7 @@ A newer hardware-based L1 trigger labeled L1Topo analyzes kinematic/geometric re
 
 The Central Trigger Processor (CTP) receives all the information in real-time from the L1Muon, L1Calo, and L1Topo processors.
 The CTP first synchronizes the trigger inputs with the LHC collision clock in order to correctly associate each event with the correct bunch crossing.
-All trigger inputs are then compared to different sets of trigger thresholds defined for each separate type of physics being targeted by ATLAS.
+All trigger inputs are then compared to different sets of trigger thresholds on the transverse momentum and various detector signatures, defined for each separate type of physics being targeted by ATLAS.
 The choice of trigger thresholds is ultimately determined by the maximum allowed L1 output rate of 100 KHz, which represents a factor of 400 reduction from the 40 MHz event rate at the LHC.
 If any set of trigger thresholds are passed, the CTP flags the event as accepted and notifies all sub-detectors.
 Upon receiving this ``L1 Accept'' (L1A) notification, all the data from each sub-detector is read out and propagated to the next step in the trigger process: the High Level Trigger.
