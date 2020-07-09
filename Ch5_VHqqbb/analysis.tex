@@ -3,6 +3,7 @@
 \chapter{Fully-Hadronic VH Resonance Search}
 
 \section{Overview}
+\label{sec:overview_hvt}
 This thesis presents the ATLAS search for new resonances decaying to a vector boson ($V = W,Z$) and a Higgs boson $H$, in the fully hadronic channel where both the $H$ and $V$ boson decay to quarks producing a $q\bar{q}^{(\prime)}b\bar{b}$ final state\footnote{The specific final states are $W \rightarrow q \bar{q}^\prime$, where the prime symbol denotes that the quark and anti-quark have different flavor, and $Z \rightarrow q\bar{q}$, where both the quark and anti-quark have the same flavor. The expression $q\bar{q}^{(\prime)}b\bar{b}$ is used to denote the general final state resulting from either $W$ or $Z$ boson decay accompanied by an $H \to b\bar{b}$ decay.}.
 This search focuses on new resonances with mass $\geq 1.5$~TeV.
 In terms of the $H$ and $V$ decay products, the mass of such a resonance can be written as
@@ -15,6 +16,8 @@ In terms of the $H$ and $V$ decay products, the mass of such a resonance can be 
 \end{equation}
 where the common particle physics convention of setting the speed of light ($c$) to unity is used.
 See Figure~\ref{fig:feynman_diagram_VHqqbb} for a tree-level Feynman diagram illustrating the basic production/decay of the signal model under consideration.
+Some of the most relevant properties of $W$ and $Z$ bosons are outlined in Tables~\ref{tab:w_props} and ~\ref{tab:z_props}.
+The branching fractions for the Higgs boson decay modes are detailed in ~\ref{fig:h_branching_ratios}.
 
 \begin{figure}
 	\centering
@@ -31,65 +34,6 @@ The dijet invariant mass ($m_{JJ}$) spectrum of the two large radius jets is the
 The dominant background ($\approx$ 90\%) corresponds to multijet QCD processes, with much smaller contributions from other non-resonant SM backgrounds: $t\bar{t}$ and $V$ + jets.
 After reconstructing the $V$ and $H$ boson candidates as large radius jets, the tools of jet substructure (Section~\ref{sec:jet_substructure}) and b-tagging (Section~\ref{sec:btagging}) are applied to heavily suppress the dominant background of multijet events.
 Due to the challenges associated with modelling this background with MC simulated samples, a fully data-driven method is used to provide a background estimation method.
-
-A simplified theoretical model \cite{Pappadopulo:2014qza} fulfilling only SM symmetry constraints is used to provide a model-independent Lagrangian for a heavy resonance search.
-This framework incorporates Heavy Vector Triplets (HVT), a common SM extension with an isospin $SU(2)_{L}$ triplet formed of a neutral $Z'$ and two charged $W^{\prime \pm}$ bosons, from which two explicit models will be considered as benchmarks to evaluate the relative sensitivity of this analysis to $W^{\prime \pm}$ and $Z'$ signals: Models A and B \cite{Pappadopulo:2014qza}, where weakly and strongly coupling scenarios are described, respectively.
-The couplings of the new vector bosons $W^{\prime \pm}$, $Z'$ to the $H$ and $V$ bosons are defined as a combination of parameters $g_{V}c_{H}$, while the couplings to fermions are defined as $(g^{2}/g_{V})c_{F}$, where $g_V$ represents the strength of the new vector boson interaction and $c_{H}$ ($c_{F}$) represents the coupling to the Higgs boson (fermions).
-In Model A, the branching fractions to fermions and gauge bosons are comparable, whereas in Model B the fermionic couplings are suppressed.
-
-A search for heavy vector resonances decaying to $VH$ in the fully hadronic final state was previously performed in ATLAS using $36.1\pm1.0\text{~fb}^{-1}$ of $pp$ collision data at 13 TeV taken during 2015 and 2016 \cite{Aaboud:2017ahz}.
-The largest excess was observed in the $ZH$ channel at $m_{JJ}\sim3.0$~TeV with a local significance of 3.3~$\sigma$, and a  global significance of  2.2~$\sigma$.
-Upper limits on the production cross-section times branching ratio to the $q\bar{q}^{(\prime)}b\bar{b}$ final state were set for resonance masses in the range between 1000 and 3800 GeV with values ranging between 107 to 3 fb and 97 to 2 fb (at 95\% CL) for $WH$ and $ZH$ resonances, respectively.
-The corresponding excluded HVT Model B signal mass ranges are 1000-2500 GeV for $WH$ resonances, and 1000 - 2600 GeV for $ZH$ resonances.
-
-Searches for heavy vector resonances decaying to $VH$ in the $V$ boson leptonic decay channels have been performed in ATLAS using $36.1\pm1.0\text{~fb}^{-1}$ of $pp$ collision data at 13 TeV \cite{EXOT-2016-10}.
-For HVT Model A $W'$ ($Z'$) masses have been excluded up to 2.67 TeV (2.65 TeV), while for Model B, $W'$ ($Z'$) masses of up to 2.86 TeV (2.83 TeV) have been excluded.
-
-The CMS collaboration has published a search for new heavy resonances decaying to $VH$ in the fully hadronic mode using $19.7$~fb$^{-1}$ of 8 TeV data from Run 1 of the LHC.
-Resonance masses up to 1.7 TeV were excluded in the combined $W'$ and $Z'$ search (1.1 TeV in \zpzh, 1.5 TeV in \wpwh), using the HVT Model B benchmark \cite{Khachatryan:2015bma}.
-The search was also performed by CMS using $35.9$~fb$^{-1}$ of 13 TeV data from Run 2 of the LHC, excluding $W'$ ($Z'$) bosons with masses up to 3.15 TeV (2.26 TeV, except 1.19-1.21 TeV) in Model B \cite{Sirunyan:2017wto}.
-
-% TODO: adapt this summary to thesis .tex structure
-This chapter is structured as follows: Section \ref{sec:theory_overview} describes the contents and motivation behind the HVT model; Section \ref{sec:samples} describes the data and simulated samples used; Sections \ref{sec:objects} and \ref{sec:selection} describe the object definitions, event selection criteria and corresponding optimization studies; Section \ref{sec:background} describes the strategy for background estimation; Section \ref{sec:statistics} describes the statistical method used to interpret the results; Section \ref{sec:syst} describes the systematic uncertainties considered in this search.
-The results and conclusions of the search are provided in Chapter \ref{ch:results}.
-
-\section{Theoretical Framework/Motivation}
-\label{sec:theory_overview}
-
-In order to search for any BSM signature in a particle collider experiment, a model with explicit predictions is necessary.
-No particular model has emerged as the most compelling or well-motivated possibility to single out for search efforts, but producing explicit results\footnote{A \textit{result} here consists of a set of experimentally-derived statistical constraints on model parameters related to the heavy resonance.} for each model would be prohibitively difficult and time consuming for HEP researchers.
-However, the case of a heavy resonance search simplifies the matter because it is not sensitive to all the specific details and free parameters of any underlying model, but only the restricted set of parameters which control the mass of the resonance and any interactions involved in its production and decay.
-
-For this reason a so-called \textit{bridge model} has been developed called the Heavy Vector Triplet (HVT) model \cite{Pappadopulo:2014qza}.
-It employs a simplified model of the resonance where only the mass parameters and relevant couplings to SM particles are retained.
-Aside from known SM symmetry constraints this simplified Lagrangian model does not need to fulfill any particular theoretical requirements.
-With this simplified model, experimental results can be presented only in terms of the parameter space of this simplified Lagrangian.
-In this way experimental results can be easily translated by theorists into constraints on parameters of any particular model.
-Due to the careful construction of the HVT model this can be done analytically and not just via numerical simulations, which eliminates the need for knowledge (on the theorists part) of the experimental details of the search results.
-
-Conceptually this method can be represented by a bridge as seen in Figure~\ref{fig:hvt_bridge}.
-The central pillar represents the simplified model with Lagrangian $\mathcal{L}_S$ and parameters $\vec{c}$.
-The likelihood $L(\vec{c})$ is used by the experimental analysis (see Section \ref{sec:statistics}) to derive constraints on the simplified model parameters $\vec{c}$.
-Once the experimental constraints on $\vec{c}$ are known they can be translated into the free parameters $\vec{p}$ of any explicit theoretical model by computing their analytic relationship to the simplified model parameters: $\vec{c}(\vec{p})$.
-
-\begin{figure}
-	\centering
-	\includegraphics[width=0.65\textwidth,origin=c]{hvt_bridge}
-	\caption{
-	Pictorial view of the HVT bridge method. \cite{Pappadopulo:2014qza}
-	}
-	\label{fig:hvt_bridge}
-\end{figure}
-
-Due to its nature as a simplified model rather than a complete description of Nature, some care must be taken to ensure the HVT model is not applied outside the realm of its validity.
-Most importantly the HVT model is constructed to only describe \textit{on-shell} resonance production and decay.
-Thus a corresponding experimental search should only be sensitive to the on-shell process and insensitive to any off-shell effects.
-
-The HVT model Lagrangian is constructed beginning with the SM Lagrangian and incorporating a real vector $V_\mu^a$, $a=1,2,3$, in the adjoint representation of $SU(2)_L$ with vanishing hypercharge.
-These new additions describe two charged ($V_\mu^\pm$) and one neutral ($V_\mu^0$) heavy spin-one particles with the charge eigenstate fields defined by the following relations
-\begin{equation}
-V_\mu^\pm = \frac{V_\mu^1 \mp iV_\mu^2}{\sqrt{2}},\ \ \ V_\mu^0 = V_\mu^3.
-\end{equation}
 
 \begin{table}[!htb]
 \begin{center}
@@ -147,15 +91,76 @@ Z Boson properties computed from global averages of experimental results by the 
 	\label{fig:h_branching_ratios}
 \end{figure}
 
-% \begin{figure}
-% 	\centering
-% 	\includegraphics[width=0.85\textwidth,origin=c]{h_boson_mass_measurement_LHC}
-% 	\caption{
-% 	Summary of the ATLAS and CMS $H^0$ mass measurements in the $\gamma\gamma$ and $ZZ \rightarrow 4 \mathrm{lepton}$ channels for Run-1 and Run-2.
-% 	\cite{Aad:2015zhl, Aaboud:2018wps, Sirunyan:2017exp}
-% 	}
-% 	\label{fig:h_mass_measurement}
-% \end{figure}
+A simplified theoretical model \cite{Pappadopulo:2014qza} fulfilling only SM symmetry constraints is used to provide a model-independent Lagrangian for a heavy resonance search.
+This framework incorporates Heavy Vector Triplets (HVT), a common SM extension with an isospin $SU(2)_{L}$ triplet formed of a neutral $Z'$ and two charged $W^{\prime \pm}$ bosons, from which two explicit models will be considered as benchmarks to evaluate the relative sensitivity of this analysis to $W^{\prime \pm}$ and $Z'$ signals: Models A and B \cite{Pappadopulo:2014qza}, where weakly and strongly coupling scenarios are described, respectively.
+The couplings of the new vector bosons $W^{\prime \pm}$, $Z'$ to the $H$ and $V$ bosons are defined as a combination of parameters $g_{V}c_{H}$, while the couplings to fermions are defined as $(g^{2}/g_{V})c_{F}$, where $g^2$ is the SM $SU(2)$ gauge coupling, $g_V$ represents the strength of the new vector boson interaction and $c_{H}$ ($c_{F}$) represents the coupling to the Higgs boson (fermions).
+In Model A, the branching fractions to fermions and gauge bosons are comparable, whereas in Model B the fermionic couplings are suppressed.
+Within the ATLAS experiment a simplified pair of coupling constants is typically used: $g_H = g_V c_H$ and $g_f=g^2 c_F / g_V$.
+
+A search for heavy vector resonances decaying to $VH$ in the fully hadronic final state was previously performed in ATLAS using $36.1\pm1.0\text{~fb}^{-1}$ of $pp$ collision data at 13 TeV taken during 2015 and 2016 \cite{Aaboud:2017ahz}.
+The largest excess was observed in the $ZH$ channel at $m_{JJ}\sim3.0$~TeV with a local significance of 3.3~$\sigma$, and a  global significance of  2.2~$\sigma$.
+Upper limits on the production cross-section times branching ratio to the $q\bar{q}^{(\prime)}b\bar{b}$ final state were set for resonance masses in the range between 1000 and 3800 GeV with values ranging between 107 to 3 fb and 97 to 2 fb (at 95\% CL) for $WH$ and $ZH$ resonances, respectively.
+The corresponding excluded HVT Model B signal mass ranges are 1000-2500 GeV for $WH$ resonances, and 1000 - 2600 GeV for $ZH$ resonances.
+
+Searches for heavy vector resonances decaying to $VH$ in the $V$ boson leptonic decay channels have been performed in ATLAS using $36.1\pm1.0\text{~fb}^{-1}$ of $pp$ collision data at 13 TeV \cite{EXOT-2016-10}.
+For HVT Model A $W'$ ($Z'$) masses have been excluded up to 2.67 TeV (2.65 TeV), while for Model B, $W'$ ($Z'$) masses of up to 2.86 TeV (2.83 TeV) have been excluded.
+
+The CMS collaboration has published a search for new heavy resonances decaying to $VH$ in the fully hadronic mode using $19.7$~fb$^{-1}$ of 8 TeV data from Run 1 of the LHC.
+Resonance masses up to 1.7 TeV were excluded in the combined $W'$ and $Z'$ search (1.1 TeV in \zpzh, 1.5 TeV in \wpwh), using the HVT Model B benchmark \cite{Khachatryan:2015bma}.
+The search was also performed by CMS using $35.9$~fb$^{-1}$ of 13 TeV data from Run 2 of the LHC, excluding $W'$ ($Z'$) bosons with masses up to 3.15 TeV (2.26 TeV, except 1.19-1.21 TeV) in Model B \cite{Sirunyan:2017wto}.
+
+This chapter is structured as follows: Section \ref{sec:theory_overview} describes the contents and motivation behind the HVT model; Section \ref{sec:samples} describes the data and simulated samples used; Sections \ref{sec:objects} and \ref{sec:selection} describe the object definitions, event selection criteria and corresponding optimization studies; Section \ref{sec:background} describes the strategy for background estimation; Section \ref{sec:statistics} describes the statistical method used to interpret the results; Section \ref{sec:syst} describes the systematic uncertainties considered in this search.
+The results and conclusions of the search are provided in Chapter \ref{ch:results}.
+
+\section{Theoretical Framework/Motivation}
+\label{sec:theory_overview}
+
+In order to search for any BSM signature in a particle collider experiment, a model with explicit predictions is necessary.
+No particular model has emerged as the most compelling or well-motivated possibility to single out for search efforts, but producing explicit results\footnote{A \textit{result} here consists of a set of experimentally-derived statistical constraints on model parameters related to the heavy resonance.} for each model would be prohibitively difficult and time consuming for HEP researchers.
+However, the case of a heavy resonance search simplifies the matter because it is not sensitive to all the specific details and free parameters of any underlying model, but only the restricted set of parameters which control the mass of the resonance and any interactions involved in its production and decay.
+
+For this reason a so-called \textit{bridge model} has been developed called the Heavy Vector Triplet (HVT) model \cite{Pappadopulo:2014qza}.
+It employs a simplified model of the resonance where only the mass parameters and relevant couplings to SM particles are retained.
+Aside from known SM symmetry constraints this simplified Lagrangian model does not need to fulfill any particular theoretical requirements.
+With this simplified model, experimental results can be presented only in terms of the parameter space of this simplified Lagrangian.
+In this way experimental results can be easily translated by theorists into constraints on parameters of any particular model.
+Due to the careful construction of the HVT model this can be done analytically and not just via numerical simulations, which eliminates the need for knowledge (on the theorists part) of the experimental details of the search results.
+
+Conceptually this method can be represented by a bridge as seen in Figure~\ref{fig:hvt_bridge}.
+The central pillar represents the simplified model with Lagrangian $\mathcal{L}_S$ and parameters $\vec{c}$.
+The likelihood $L(\vec{c})$ is used by the experimental analysis (see Section \ref{sec:statistics}) to derive constraints on the simplified model parameters $\vec{c}$.
+Once the experimental constraints on $\vec{c}$ are known they can be translated into the free parameters $\vec{p}$ of any explicit theoretical model by computing their analytic relationship to the simplified model parameters: $\vec{c}(\vec{p})$.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.65\textwidth,origin=c]{hvt_bridge}
+	\caption{
+	Pictorial view of the HVT bridge method. \cite{Pappadopulo:2014qza}
+	}
+	\label{fig:hvt_bridge}
+\end{figure}
+
+Due to its nature as a simplified model rather than a complete description of Nature, some care must be taken to ensure the HVT model is not applied outside the realm of its validity.
+Most importantly the HVT model is constructed to only describe \textit{on-shell} resonance production and decay.
+Thus a corresponding experimental search should only be sensitive to the on-shell process and insensitive to any off-shell effects.
+
+The HVT model Lagrangian is constructed beginning with the SM Lagrangian and incorporating a real vector $V_\mu^a$, $a=1,2,3$, in the adjoint representation of $SU(2)_L$ with vanishing hypercharge.
+These new additions describe two charged ($V_\mu^\pm$) and one neutral ($V_\mu^0$) heavy spin-one particles with the charge eigenstate fields defined by the following relations:
+\begin{equation}
+V_\mu^\pm = \frac{V_\mu^1 \mp iV_\mu^2}{\sqrt{2}},\ \ \ V_\mu^0 = V_\mu^3.
+\end{equation}
+The impact on the choice of model A/B on the branching ratios of the two body decays and total width of the neutral $V^0$ boson is shown in Figure~\ref{fig:hvt_br_models}.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.92\textwidth,origin=c]{hvt_br_models}
+	\caption{
+	Upper  panel: Branching  Ratios  for  the  two  body  decays  of  the  neutral  vector $V_0$ for the benchmark model A with $g_V=1$ (left) and model B $g_V=3$ (right).
+	Lower panel: Total widths corresponding to different values of the coupling $g_V$ in the models A (left) and B (right).
+	\cite{Pappadopulo:2014qza}
+	}
+	\label{fig:hvt_br_models}
+\end{figure}
 
 \section{Data and Monte Carlo Simulation}
 \label{sec:samples}
